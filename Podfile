@@ -6,5 +6,9 @@ target 'LeoiOSQuiz' do
   use_frameworks!
 
   # Pods for LeoiOSQuiz
-
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'PromiseKit'
+  pod 'Alamofire'
+  pod 'ObjectMapper'
 end

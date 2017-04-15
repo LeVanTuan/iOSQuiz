@@ -7,21 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84A1306F1EA1A86C005F21BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1306E1EA1A86C005F21BF /* AppDelegate.swift */; };
-		84A130711EA1A86C005F21BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130701EA1A86C005F21BF /* ViewController.swift */; };
 		84A130741EA1A86C005F21BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A130721EA1A86C005F21BF /* Main.storyboard */; };
 		84A130761EA1A86C005F21BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A130751EA1A86C005F21BF /* Assets.xcassets */; };
 		84A130791EA1A86C005F21BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A130771EA1A86C005F21BF /* LaunchScreen.storyboard */; };
+		84A130891EA1DE17005F21BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130831EA1DE17005F21BF /* AppDelegate.swift */; };
+		84A1308B1EA1DE2D005F21BF /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1308A1EA1DE2D005F21BF /* AppDefines.swift */; };
+		84A1308D1EA1DE41005F21BF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1308C1EA1DE41005F21BF /* Strings.swift */; };
+		84A1308F1EA1DE4E005F21BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1308E1EA1DE4E005F21BF /* Constants.swift */; };
+		84A130931EA1DF68005F21BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130921EA1DF68005F21BF /* MainViewController.swift */; };
+		84A130951EA1DF85005F21BF /* RestaurantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130941EA1DF85005F21BF /* RestaurantDetailsViewController.swift */; };
+		84A130991EA20DA4005F21BF /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130981EA20DA4005F21BF /* APIServices.swift */; };
+		84A1309D1EA21091005F21BF /* APIBaseInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1309C1EA21091005F21BF /* APIBaseInput.swift */; };
+		84A1309F1EA2109E005F21BF /* APIBaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1309E1EA2109E005F21BF /* APIBaseOutput.swift */; };
+		84A130A11EA210A7005F21BF /* APIUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130A01EA210A7005F21BF /* APIUrl.swift */; };
+		84A130A31EA21169005F21BF /* RestaurantServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130A21EA21169005F21BF /* RestaurantServices.swift */; };
+		84A130A51EA2119C005F21BF /* GetRestaurantsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130A41EA2119C005F21BF /* GetRestaurantsInput.swift */; };
+		84A130A71EA211AE005F21BF /* GetRestaurantsOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130A61EA211AE005F21BF /* GetRestaurantsOutput.swift */; };
+		84A130A91EA216F8005F21BF /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130A81EA216F8005F21BF /* ResponseError.swift */; };
+		84A130AB1EA21821005F21BF /* RestaurantAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130AA1EA21821005F21BF /* RestaurantAPIProtocol.swift */; };
+		84A130AD1EA2199B005F21BF /* GetRestaurantReviewsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130AC1EA2199B005F21BF /* GetRestaurantReviewsInput.swift */; };
+		84A130AF1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130AE1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift */; };
+		D17E176D7CAB3DB5162356F9 /* Pods_LeoiOSQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F05D38E7B2E661E781DB3EE /* Pods_LeoiOSQuiz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DB372B962502C1B22FCD973 /* Pods-LeoiOSQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeoiOSQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeoiOSQuiz/Pods-LeoiOSQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		5F05D38E7B2E661E781DB3EE /* Pods_LeoiOSQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeoiOSQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A1306B1EA1A86C005F21BF /* LeoiOSQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeoiOSQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		84A1306E1EA1A86C005F21BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84A130701EA1A86C005F21BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84A130731EA1A86C005F21BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84A130751EA1A86C005F21BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A130781EA1A86C005F21BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84A1307A1EA1A86C005F21BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A130831EA1DE17005F21BF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84A1308A1EA1DE2D005F21BF /* AppDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
+		84A1308C1EA1DE41005F21BF /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		84A1308E1EA1DE4E005F21BF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84A130921EA1DF68005F21BF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84A130941EA1DF85005F21BF /* RestaurantDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewController.swift; sourceTree = "<group>"; };
+		84A130981EA20DA4005F21BF /* APIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		84A1309C1EA21091005F21BF /* APIBaseInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIBaseInput.swift; sourceTree = "<group>"; };
+		84A1309E1EA2109E005F21BF /* APIBaseOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIBaseOutput.swift; sourceTree = "<group>"; };
+		84A130A01EA210A7005F21BF /* APIUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUrl.swift; sourceTree = "<group>"; };
+		84A130A21EA21169005F21BF /* RestaurantServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantServices.swift; sourceTree = "<group>"; };
+		84A130A41EA2119C005F21BF /* GetRestaurantsInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestaurantsInput.swift; sourceTree = "<group>"; };
+		84A130A61EA211AE005F21BF /* GetRestaurantsOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestaurantsOutput.swift; sourceTree = "<group>"; };
+		84A130A81EA216F8005F21BF /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		84A130AA1EA21821005F21BF /* RestaurantAPIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantAPIProtocol.swift; sourceTree = "<group>"; };
+		84A130AC1EA2199B005F21BF /* GetRestaurantReviewsInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestaurantReviewsInput.swift; sourceTree = "<group>"; };
+		84A130AE1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestaurantReviewsOutput.swift; sourceTree = "<group>"; };
+		AB25868AD8F5D014F251E85F /* Pods-LeoiOSQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeoiOSQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeoiOSQuiz/Pods-LeoiOSQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +63,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17E176D7CAB3DB5162356F9 /* Pods_LeoiOSQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CD1B0D55CCA053D71E49132 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F05D38E7B2E661E781DB3EE /* Pods_LeoiOSQuiz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84A130621EA1A86C005F21BF = {
 			isa = PBXGroup;
 			children = (
 				84A1306D1EA1A86C005F21BF /* LeoiOSQuiz */,
 				84A1306C1EA1A86C005F21BF /* Products */,
+				FB734F5BA7DAD9F4687FDBA9 /* Pods */,
+				2CD1B0D55CCA053D71E49132 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +99,135 @@
 		84A1306D1EA1A86C005F21BF /* LeoiOSQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				84A1306E1EA1A86C005F21BF /* AppDelegate.swift */,
-				84A130701EA1A86C005F21BF /* ViewController.swift */,
+				84A130801EA1DE17005F21BF /* Classes */,
+				84A130881EA1DE17005F21BF /* Resources */,
 				84A130721EA1A86C005F21BF /* Main.storyboard */,
 				84A130751EA1A86C005F21BF /* Assets.xcassets */,
 				84A130771EA1A86C005F21BF /* LaunchScreen.storyboard */,
 				84A1307A1EA1A86C005F21BF /* Info.plist */,
 			);
 			path = LeoiOSQuiz;
+			sourceTree = "<group>";
+		};
+		84A130801EA1DE17005F21BF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				84A130811EA1DE17005F21BF /* AppDefines */,
+				84A130821EA1DE17005F21BF /* AppDelegate */,
+				84A130841EA1DE17005F21BF /* Models */,
+				84A130851EA1DE17005F21BF /* Services */,
+				84A130861EA1DE17005F21BF /* ViewControllers */,
+				84A130871EA1DE17005F21BF /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		84A130811EA1DE17005F21BF /* AppDefines */ = {
+			isa = PBXGroup;
+			children = (
+				84A1308A1EA1DE2D005F21BF /* AppDefines.swift */,
+				84A1308C1EA1DE41005F21BF /* Strings.swift */,
+				84A1308E1EA1DE4E005F21BF /* Constants.swift */,
+			);
+			path = AppDefines;
+			sourceTree = "<group>";
+		};
+		84A130821EA1DE17005F21BF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				84A130831EA1DE17005F21BF /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		84A130841EA1DE17005F21BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84A130851EA1DE17005F21BF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84A130961EA20D8C005F21BF /* API */,
+				84A130971EA20D8C005F21BF /* Restaurant */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84A130861EA1DE17005F21BF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84A130901EA1DE9B005F21BF /* MainViewController */,
+				84A130911EA1DE9B005F21BF /* RestaurantDetailsViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		84A130871EA1DE17005F21BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84A130881EA1DE17005F21BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84A130901EA1DE9B005F21BF /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84A130921EA1DF68005F21BF /* MainViewController.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		84A130911EA1DE9B005F21BF /* RestaurantDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84A130941EA1DF85005F21BF /* RestaurantDetailsViewController.swift */,
+			);
+			path = RestaurantDetailsViewController;
+			sourceTree = "<group>";
+		};
+		84A130961EA20D8C005F21BF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				84A130981EA20DA4005F21BF /* APIServices.swift */,
+				84A1309C1EA21091005F21BF /* APIBaseInput.swift */,
+				84A1309E1EA2109E005F21BF /* APIBaseOutput.swift */,
+				84A130A01EA210A7005F21BF /* APIUrl.swift */,
+				84A130A81EA216F8005F21BF /* ResponseError.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		84A130971EA20D8C005F21BF /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				84A130AA1EA21821005F21BF /* RestaurantAPIProtocol.swift */,
+				84A130A21EA21169005F21BF /* RestaurantServices.swift */,
+				84A130A41EA2119C005F21BF /* GetRestaurantsInput.swift */,
+				84A130A61EA211AE005F21BF /* GetRestaurantsOutput.swift */,
+				84A130AC1EA2199B005F21BF /* GetRestaurantReviewsInput.swift */,
+				84A130AE1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift */,
+			);
+			name = Restaurant;
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		FB734F5BA7DAD9F4687FDBA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB25868AD8F5D014F251E85F /* Pods-LeoiOSQuiz.debug.xcconfig */,
+				1DB372B962502C1B22FCD973 /* Pods-LeoiOSQuiz.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84A1307D1EA1A86C005F21BF /* Build configuration list for PBXNativeTarget "LeoiOSQuiz" */;
 			buildPhases = (
+				A69F54E8C8635413CA7231BC /* [CP] Check Pods Manifest.lock */,
 				84A130671EA1A86C005F21BF /* Sources */,
 				84A130681EA1A86C005F21BF /* Frameworks */,
 				84A130691EA1A86C005F21BF /* Resources */,
+				364C814239EC22D621B191D2 /* [CP] Embed Pods Frameworks */,
+				0AA597C831A41766BA4E3C79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +301,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AA597C831A41766BA4E3C79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeoiOSQuiz/Pods-LeoiOSQuiz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		364C814239EC22D621B191D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeoiOSQuiz/Pods-LeoiOSQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69F54E8C8635413CA7231BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84A130671EA1A86C005F21BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84A130711EA1A86C005F21BF /* ViewController.swift in Sources */,
-				84A1306F1EA1A86C005F21BF /* AppDelegate.swift in Sources */,
+				84A130A51EA2119C005F21BF /* GetRestaurantsInput.swift in Sources */,
+				84A130951EA1DF85005F21BF /* RestaurantDetailsViewController.swift in Sources */,
+				84A130AF1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift in Sources */,
+				84A130A11EA210A7005F21BF /* APIUrl.swift in Sources */,
+				84A130A31EA21169005F21BF /* RestaurantServices.swift in Sources */,
+				84A130991EA20DA4005F21BF /* APIServices.swift in Sources */,
+				84A1308B1EA1DE2D005F21BF /* AppDefines.swift in Sources */,
+				84A1308D1EA1DE41005F21BF /* Strings.swift in Sources */,
+				84A130A71EA211AE005F21BF /* GetRestaurantsOutput.swift in Sources */,
+				84A130AD1EA2199B005F21BF /* GetRestaurantReviewsInput.swift in Sources */,
+				84A130891EA1DE17005F21BF /* AppDelegate.swift in Sources */,
+				84A1308F1EA1DE4E005F21BF /* Constants.swift in Sources */,
+				84A1309F1EA2109E005F21BF /* APIBaseOutput.swift in Sources */,
+				84A1309D1EA21091005F21BF /* APIBaseInput.swift in Sources */,
+				84A130AB1EA21821005F21BF /* RestaurantAPIProtocol.swift in Sources */,
+				84A130931EA1DF68005F21BF /* MainViewController.swift in Sources */,
+				84A130A91EA216F8005F21BF /* ResponseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +491,7 @@
 		};
 		84A1307E1EA1A86C005F21BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB25868AD8F5D014F251E85F /* Pods-LeoiOSQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WNM28K894G;
@@ -273,6 +506,7 @@
 		};
 		84A1307F1EA1A86C005F21BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB372B962502C1B22FCD973 /* Pods-LeoiOSQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WNM28K894G;
@@ -304,6 +538,7 @@
 				84A1307F1EA1A86C005F21BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
