@@ -9,7 +9,10 @@
 import UIKit
 
 struct APIUrl {
-    static let endPoint = "d"
+    static let endPoint = "https://api.yelp.com/v3/"
+    
+    //Get access token
+    static let getAccessToken = "https://api.yelp.com/oauth2/token"
     
     //Get retaurants
     static let getRestaurants = "d"

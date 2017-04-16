@@ -27,6 +27,11 @@
 		84A130AB1EA21821005F21BF /* RestaurantAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130AA1EA21821005F21BF /* RestaurantAPIProtocol.swift */; };
 		84A130AD1EA2199B005F21BF /* GetRestaurantReviewsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130AC1EA2199B005F21BF /* GetRestaurantReviewsInput.swift */; };
 		84A130AF1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130AE1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift */; };
+		84EF397F1EA3AFC50075182F /* AuthenticationAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF397E1EA3AFC50075182F /* AuthenticationAPIProtocol.swift */; };
+		84EF39811EA3AFE60075182F /* AuthenticationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF39801EA3AFE60075182F /* AuthenticationServices.swift */; };
+		84EF39831EA3AFF70075182F /* AuthenticationInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF39821EA3AFF70075182F /* AuthenticationInput.swift */; };
+		84EF39851EA3B0100075182F /* AuthenticationOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF39841EA3B0100075182F /* AuthenticationOutput.swift */; };
+		84EF39871EA3C33B0075182F /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF39861EA3C33B0075182F /* Authentication.swift */; };
 		D17E176D7CAB3DB5162356F9 /* Pods_LeoiOSQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F05D38E7B2E661E781DB3EE /* Pods_LeoiOSQuiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +60,11 @@
 		84A130AA1EA21821005F21BF /* RestaurantAPIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantAPIProtocol.swift; sourceTree = "<group>"; };
 		84A130AC1EA2199B005F21BF /* GetRestaurantReviewsInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestaurantReviewsInput.swift; sourceTree = "<group>"; };
 		84A130AE1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestaurantReviewsOutput.swift; sourceTree = "<group>"; };
+		84EF397E1EA3AFC50075182F /* AuthenticationAPIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationAPIProtocol.swift; sourceTree = "<group>"; };
+		84EF39801EA3AFE60075182F /* AuthenticationServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationServices.swift; sourceTree = "<group>"; };
+		84EF39821EA3AFF70075182F /* AuthenticationInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationInput.swift; sourceTree = "<group>"; };
+		84EF39841EA3B0100075182F /* AuthenticationOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationOutput.swift; sourceTree = "<group>"; };
+		84EF39861EA3C33B0075182F /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		AB25868AD8F5D014F251E85F /* Pods-LeoiOSQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeoiOSQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeoiOSQuiz/Pods-LeoiOSQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +153,7 @@
 		84A130841EA1DE17005F21BF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84EF39861EA3C33B0075182F /* Authentication.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				84A130961EA20D8C005F21BF /* API */,
+				84EF397D1EA3AFAD0075182F /* Authentication */,
 				84A130971EA20D8C005F21BF /* Restaurant */,
 			);
 			path = Services;
@@ -219,6 +231,17 @@
 			);
 			name = Restaurant;
 			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		84EF397D1EA3AFAD0075182F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				84EF397E1EA3AFC50075182F /* AuthenticationAPIProtocol.swift */,
+				84EF39801EA3AFE60075182F /* AuthenticationServices.swift */,
+				84EF39821EA3AFF70075182F /* AuthenticationInput.swift */,
+				84EF39841EA3B0100075182F /* AuthenticationOutput.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		FB734F5BA7DAD9F4687FDBA9 /* Pods */ = {
@@ -356,14 +379,18 @@
 			files = (
 				84A130A51EA2119C005F21BF /* GetRestaurantsInput.swift in Sources */,
 				84A130951EA1DF85005F21BF /* RestaurantDetailsViewController.swift in Sources */,
+				84EF397F1EA3AFC50075182F /* AuthenticationAPIProtocol.swift in Sources */,
 				84A130AF1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift in Sources */,
 				84A130A11EA210A7005F21BF /* APIUrl.swift in Sources */,
 				84A130A31EA21169005F21BF /* RestaurantServices.swift in Sources */,
+				84EF39811EA3AFE60075182F /* AuthenticationServices.swift in Sources */,
 				84A130991EA20DA4005F21BF /* APIServices.swift in Sources */,
 				84A1308B1EA1DE2D005F21BF /* AppDefines.swift in Sources */,
 				84A1308D1EA1DE41005F21BF /* Strings.swift in Sources */,
 				84A130A71EA211AE005F21BF /* GetRestaurantsOutput.swift in Sources */,
 				84A130AD1EA2199B005F21BF /* GetRestaurantReviewsInput.swift in Sources */,
+				84EF39831EA3AFF70075182F /* AuthenticationInput.swift in Sources */,
+				84EF39851EA3B0100075182F /* AuthenticationOutput.swift in Sources */,
 				84A130891EA1DE17005F21BF /* AppDelegate.swift in Sources */,
 				84A1308F1EA1DE4E005F21BF /* Constants.swift in Sources */,
 				84A1309F1EA2109E005F21BF /* APIBaseOutput.swift in Sources */,
@@ -371,6 +398,7 @@
 				84A130AB1EA21821005F21BF /* RestaurantAPIProtocol.swift in Sources */,
 				84A130931EA1DF68005F21BF /* MainViewController.swift in Sources */,
 				84A130A91EA216F8005F21BF /* ResponseError.swift in Sources */,
+				84EF39871EA3C33B0075182F /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
