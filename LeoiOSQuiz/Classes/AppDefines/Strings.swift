@@ -9,3 +9,6 @@
 import UIKit
 
 let kStringUserLocationTitle = "My Location"
+
+//reviews
+let kStringNumberReviews = "%d Reviews"
