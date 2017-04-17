@@ -6,27 +6,54 @@
 //  Copyright © 2017 Leo LE. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import ObjectMapper
 
-class Authentication: Mappable {
+class Authentication: NSObject, Mappable, NSCoding {
     var accessToken: String
     var tokenType: String
-    var expiresIn: Int
+    var expiresIn: Double
     
-    init() {
+    override init() {
         self.accessToken = ""
         self.tokenType = ""
         self.expiresIn = 0
     }
     
-    convenience required init?(map: Map) {
+    init(accessToken: String, tokenType: String, expresIn: Double) {
+        self.accessToken = accessToken
+        self.tokenType = tokenType
+        self.expiresIn = expresIn
+    }
+    
+    required public convenience init?(map: Map) {
         self.init()
     }
     
-    func mapping(map: Map) {
-        accessToken <- map["access_token"]
-        tokenType <- map["token_type"]
-        expiresIn <- map["expires_in"]
+    public func mapping(map: Map) {
+        accessToken <- map[AuthenKey.accessToken.rawValue]
+        tokenType <- map[AuthenKey.tokenType.rawValue]
+        expiresIn <- map[AuthenKey.expiresIn.rawValue]
+    }
+
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.accessToken, forKey: AuthenKey.accessToken.rawValue)
+        aCoder.encode(self.tokenType, forKey: AuthenKey.tokenType.rawValue)
+        aCoder.encode(self.expiresIn, forKey: AuthenKey.expiresIn.rawValue)
+    }
+    
+    required convenience public init?(coder aDecoder: NSCoder) {
+        let accessToken = aDecoder.decodeObject(forKey: AuthenKey.accessToken.rawValue) as! String
+        let tokenType = aDecoder.decodeObject(forKey: AuthenKey.tokenType.rawValue) as! String
+        let expiresIn = aDecoder.decodeDouble(forKey: AuthenKey.expiresIn.rawValue)
+        self.init(accessToken: accessToken, tokenType: tokenType, expresIn: expiresIn)
+    }
+    
+    func isAccessTokenExist() -> Bool {
+        let currentInterval = Date().timeIntervalSince1970
+        if currentInterval <= self.expiresIn {
+            return !self.accessToken.isEmpty
+        }
+        return false
     }
 }

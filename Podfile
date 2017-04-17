@@ -10,5 +10,8 @@ target 'LeoiOSQuiz' do
   pod 'GooglePlaces'
   pod 'PromiseKit'
   pod 'Alamofire'
+  pod 'AlamofireImage'
   pod 'ObjectMapper'
+  pod 'SnapKit'
+  pod 'Cosmos'
 end

@@ -16,10 +16,28 @@ class MainViewController: UIViewController {
     var mapView: GMSMapView!
     var userMarker: GMSMarker?
     
+    let services = AuthenticationServices()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         congigureMapView()
         configureUserLocation()
+        if !AppUserDefaults.authentication.isAccessTokenExist() {
+            getToken()
+        }
+    }
+    
+    func getToken() {
+        firstly { () -> Promise<AuthenticationOutput> in
+            let input = AuthenticationInput()
+            return services.getAccessToken(input)
+            }.then { (output) -> Void in
+                print("Token: ",output.authen.accessToken)
+                AppUserDefaults.authentication = output.authen
+            }.catch {(error) in
+                print(error)
+            }.always {
+        }
     }
 }
 
@@ -29,6 +47,7 @@ extension MainViewController {
         mapView = GMSMapView()
         mapView.frame = self.view.frame
         self.view.addSubview(mapView)
+        mapView.delegate = self
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
         mapView.addObserver(self, forKeyPath: "myLocation", options: .new, context: nil)
@@ -47,7 +66,12 @@ extension MainViewController {
 
 //MARK: - Map view delegate
 extension MainViewController: GMSMapViewDelegate {
- 
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        let inforView = InforWindowView.initFromNib()
+        inforView.frame = CGRect(x: 0, y: 0, width: (self.view.frame.width - 30), height: 70)
+        inforView.restaurant = Restaurant.testRestaurant()
+        return inforView
+    }
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         

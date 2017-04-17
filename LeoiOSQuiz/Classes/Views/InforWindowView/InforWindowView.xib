@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InforWindowView" customModule="LeoiOSQuiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TeA-Ri-jAL">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TeA-Ri-jAL" secondAttribute="height" multiplier="1:1" id="9aA-HF-nyX"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đậu xanh Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVZ-KT-7xW">
+                    <rect key="frame" x="78" y="4" width="289" height="22"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="69 Hàm Nghi, Đà Nẵng, Việt Nam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKD-Mr-1Oe">
+                    <rect key="frame" x="78" y="28" width="289" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4,3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjK-0h-Ixu" userLabel="Rate">
+                    <rect key="frame" x="78" y="47.5" width="19.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="1" green="0.57731935696302017" blue="0.0187469746703115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSE-nj-P6Y">
+                    <rect key="frame" x="99.5" y="48" width="120" height="15"/>
+                    <color key="backgroundColor" red="0.29411764709999999" green="0.80392156859999997" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="YYe-PD-vil"/>
+                        <constraint firstAttribute="width" constant="120" id="ZFF-NP-Tzk"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34 Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGW-4e-8wm" userLabel="Reviews">
+                    <rect key="frame" x="227.5" y="47.5" width="69.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sSE-nj-P6Y" firstAttribute="leading" secondItem="XjK-0h-Ixu" secondAttribute="trailing" constant="2" id="5a4-8b-auk"/>
+                <constraint firstItem="MGW-4e-8wm" firstAttribute="centerY" secondItem="XjK-0h-Ixu" secondAttribute="centerY" id="5pS-2u-1qN"/>
+                <constraint firstItem="TeA-Ri-jAL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="C3L-k9-Jzl"/>
+                <constraint firstItem="xVZ-KT-7xW" firstAttribute="leading" secondItem="TeA-Ri-jAL" secondAttribute="trailing" constant="8" id="LLq-S3-ET3"/>
+                <constraint firstItem="xVZ-KT-7xW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="PWt-OH-OyR"/>
+                <constraint firstItem="hKD-Mr-1Oe" firstAttribute="trailing" secondItem="xVZ-KT-7xW" secondAttribute="trailing" id="X7L-va-L5Y"/>
+                <constraint firstAttribute="trailing" secondItem="xVZ-KT-7xW" secondAttribute="trailing" constant="8" id="bOy-ou-Cgy"/>
+                <constraint firstItem="hKD-Mr-1Oe" firstAttribute="top" secondItem="xVZ-KT-7xW" secondAttribute="bottom" constant="2" id="fFi-Yb-1r0"/>
+                <constraint firstAttribute="bottom" secondItem="TeA-Ri-jAL" secondAttribute="bottom" id="k5F-77-TsG"/>
+                <constraint firstItem="XjK-0h-Ixu" firstAttribute="top" secondItem="hKD-Mr-1Oe" secondAttribute="bottom" constant="5" id="kUJ-rv-mdm"/>
+                <constraint firstItem="hKD-Mr-1Oe" firstAttribute="leading" secondItem="xVZ-KT-7xW" secondAttribute="leading" id="kwm-av-sxl"/>
+                <constraint firstItem="sSE-nj-P6Y" firstAttribute="centerY" secondItem="XjK-0h-Ixu" secondAttribute="centerY" id="lQq-EX-Qdy"/>
+                <constraint firstItem="TeA-Ri-jAL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mnv-tN-fvi"/>
+                <constraint firstItem="XjK-0h-Ixu" firstAttribute="leading" secondItem="xVZ-KT-7xW" secondAttribute="leading" id="oxb-Fr-Ja3"/>
+                <constraint firstItem="MGW-4e-8wm" firstAttribute="leading" secondItem="sSE-nj-P6Y" secondAttribute="trailing" constant="8" id="t8d-iU-GjK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addressLabel" destination="hKD-Mr-1Oe" id="1jo-KW-4Gb"/>
+                <outlet property="imageView" destination="TeA-Ri-jAL" id="PKW-MV-Qq2"/>
+                <outlet property="nameLabel" destination="xVZ-KT-7xW" id="R73-3u-Dbf"/>
+                <outlet property="ratingContainer" destination="sSE-nj-P6Y" id="4qX-VG-1g2"/>
+                <outlet property="ratingLabel" destination="XjK-0h-Ixu" id="FVW-H1-z50"/>
+                <outlet property="reviewLabel" destination="MGW-4e-8wm" id="Pnz-Jf-aTE"/>
+            </connections>
+            <point key="canvasLocation" x="-70.5" y="-172"/>
+        </view>
+    </objects>
+</document>

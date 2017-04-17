@@ -12,13 +12,10 @@ import Alamofire
 class AuthenticationInput: APIBaseInput {
     
     init() {
-        let params: [String : Any] = [
-            "grant_type" : "",
-            "client_id" : AppConfigures.clientSecret,
-            "client_secret" : AppConfigures.clientSecret
-        ]
-        super.init(urlString: APIUrl.getAccessToken,
+        let urlString = String(format:APIUrl.getAccessToken,AppConfigures.clientID,AppConfigures.clientSecret)
+        super.init(urlString: urlString,
                    requestType: .post,
-                   parameters: params)
+                   parameters: nil,
+                   isTokenRequired: false)
     }
 }

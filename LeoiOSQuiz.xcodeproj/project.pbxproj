@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		518C5F461EA4716E0035F79B /* InforWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F451EA4716E0035F79B /* InforWindowView.swift */; };
+		518C5F4B1EA471F70035F79B /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F4A1EA471F70035F79B /* NSObjectExtensions.swift */; };
+		518C5F4D1EA473600035F79B /* InforWindowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 518C5F4C1EA473600035F79B /* InforWindowView.xib */; };
+		518C5F4F1EA473970035F79B /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F4E1EA473970035F79B /* Restaurant.swift */; };
+		518C5F521EA473E40035F79B /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F511EA473E40035F79B /* RatingView.swift */; };
+		518C5F541EA473F20035F79B /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 518C5F531EA473F20035F79B /* RatingView.xib */; };
+		518C5F581EA4A9760035F79B /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F571EA4A9760035F79B /* FloatExtension.swift */; };
+		518C5F5A1EA4C4D50035F79B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F591EA4C4D50035F79B /* UIImageExtension.swift */; };
 		84A130741EA1A86C005F21BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A130721EA1A86C005F21BF /* Main.storyboard */; };
 		84A130761EA1A86C005F21BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A130751EA1A86C005F21BF /* Assets.xcassets */; };
 		84A130791EA1A86C005F21BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A130771EA1A86C005F21BF /* LaunchScreen.storyboard */; };
@@ -37,6 +45,14 @@
 
 /* Begin PBXFileReference section */
 		1DB372B962502C1B22FCD973 /* Pods-LeoiOSQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeoiOSQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeoiOSQuiz/Pods-LeoiOSQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		518C5F451EA4716E0035F79B /* InforWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforWindowView.swift; sourceTree = "<group>"; };
+		518C5F4A1EA471F70035F79B /* NSObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
+		518C5F4C1EA473600035F79B /* InforWindowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InforWindowView.xib; sourceTree = "<group>"; };
+		518C5F4E1EA473970035F79B /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		518C5F511EA473E40035F79B /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		518C5F531EA473F20035F79B /* RatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
+		518C5F571EA4A9760035F79B /* FloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
+		518C5F591EA4C4D50035F79B /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		5F05D38E7B2E661E781DB3EE /* Pods_LeoiOSQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeoiOSQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A1306B1EA1A86C005F21BF /* LeoiOSQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeoiOSQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A130731EA1A86C005F21BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +104,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		518C5F431EA4711A0035F79B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				518C5F441EA4715B0035F79B /* InforWindowView */,
+			);
+			path = Views;
+			sourceTree = SOURCE_ROOT;
+		};
+		518C5F441EA4715B0035F79B /* InforWindowView */ = {
+			isa = PBXGroup;
+			children = (
+				518C5F501EA473D50035F79B /* RatingView */,
+				518C5F451EA4716E0035F79B /* InforWindowView.swift */,
+				518C5F4C1EA473600035F79B /* InforWindowView.xib */,
+			);
+			name = InforWindowView;
+			path = LeoiOSQuiz/Classes/Views/InforWindowView;
+			sourceTree = SOURCE_ROOT;
+		};
+		518C5F471EA471880035F79B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				518C5F4A1EA471F70035F79B /* NSObjectExtensions.swift */,
+				518C5F571EA4A9760035F79B /* FloatExtension.swift */,
+				518C5F591EA4C4D50035F79B /* UIImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		518C5F501EA473D50035F79B /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				518C5F511EA473E40035F79B /* RatingView.swift */,
+				518C5F531EA473F20035F79B /* RatingView.xib */,
+			);
+			path = RatingView;
+			sourceTree = "<group>";
+		};
 		84A130621EA1A86C005F21BF = {
 			isa = PBXGroup;
 			children = (
@@ -122,12 +176,13 @@
 		84A130801EA1DE17005F21BF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				518C5F471EA471880035F79B /* Extensions */,
 				84A130811EA1DE17005F21BF /* AppDefines */,
 				84A130821EA1DE17005F21BF /* AppDelegate */,
-				84A130841EA1DE17005F21BF /* Models */,
 				84A130851EA1DE17005F21BF /* Services */,
+				84A130841EA1DE17005F21BF /* Models */,
+				518C5F431EA4711A0035F79B /* Views */,
 				84A130861EA1DE17005F21BF /* ViewControllers */,
-				84A130871EA1DE17005F21BF /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -154,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				84EF39861EA3C33B0075182F /* Authentication.swift */,
+				518C5F4E1EA473970035F79B /* Restaurant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,13 +231,6 @@
 				84A130911EA1DE9B005F21BF /* RestaurantDetailsViewController */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		84A130871EA1DE17005F21BF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		84A130881EA1DE17005F21BF /* Resources */ = {
@@ -317,6 +366,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A130791EA1A86C005F21BF /* LaunchScreen.storyboard in Resources */,
+				518C5F541EA473F20035F79B /* RatingView.xib in Resources */,
+				518C5F4D1EA473600035F79B /* InforWindowView.xib in Resources */,
 				84A130761EA1A86C005F21BF /* Assets.xcassets in Resources */,
 				84A130741EA1A86C005F21BF /* Main.storyboard in Resources */,
 			);
@@ -384,9 +435,14 @@
 				84A130A11EA210A7005F21BF /* APIUrl.swift in Sources */,
 				84A130A31EA21169005F21BF /* RestaurantServices.swift in Sources */,
 				84EF39811EA3AFE60075182F /* AuthenticationServices.swift in Sources */,
+				518C5F521EA473E40035F79B /* RatingView.swift in Sources */,
 				84A130991EA20DA4005F21BF /* APIServices.swift in Sources */,
+				518C5F461EA4716E0035F79B /* InforWindowView.swift in Sources */,
 				84A1308B1EA1DE2D005F21BF /* AppDefines.swift in Sources */,
+				518C5F581EA4A9760035F79B /* FloatExtension.swift in Sources */,
+				518C5F4F1EA473970035F79B /* Restaurant.swift in Sources */,
 				84A1308D1EA1DE41005F21BF /* Strings.swift in Sources */,
+				518C5F4B1EA471F70035F79B /* NSObjectExtensions.swift in Sources */,
 				84A130A71EA211AE005F21BF /* GetRestaurantsOutput.swift in Sources */,
 				84A130AD1EA2199B005F21BF /* GetRestaurantReviewsInput.swift in Sources */,
 				84EF39831EA3AFF70075182F /* AuthenticationInput.swift in Sources */,
@@ -395,6 +451,7 @@
 				84A1308F1EA1DE4E005F21BF /* Constants.swift in Sources */,
 				84A1309F1EA2109E005F21BF /* APIBaseOutput.swift in Sources */,
 				84A1309D1EA21091005F21BF /* APIBaseInput.swift in Sources */,
+				518C5F5A1EA4C4D50035F79B /* UIImageExtension.swift in Sources */,
 				84A130AB1EA21821005F21BF /* RestaurantAPIProtocol.swift in Sources */,
 				84A130931EA1DF68005F21BF /* MainViewController.swift in Sources */,
 				84A130A91EA216F8005F21BF /* ResponseError.swift in Sources */,

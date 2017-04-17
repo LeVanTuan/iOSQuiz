@@ -12,7 +12,7 @@ import ObjectMapper
 class AuthenticationOutput: APIBaseOutput {
     var authen: Authentication
     
-    private override init() {
+    override init() {
         authen = Authentication()
         super.init()
     }
@@ -23,6 +23,6 @@ class AuthenticationOutput: APIBaseOutput {
     
     override func mapping(map: Map) {
         super.mapping(map: map)
-        authen <- map
+        authen.mapping(map: map)
     }
 }

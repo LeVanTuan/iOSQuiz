@@ -10,7 +10,6 @@ import UIKit
 import ObjectMapper
 
 class APIBaseOutput: Mappable {
-    var message: String?
     
     init() {
         
