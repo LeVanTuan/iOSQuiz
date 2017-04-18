@@ -11,17 +11,23 @@ import ObjectMapper
 
 class Restaurant: Mappable {
     var name: String
-    var address: String
     var rating: Float
-    var icon: String
-    var reviews: [Any]
-    
+    var imageUrl: String
+    var url: String
+    var reviewCount: Int
+    var coordinates : Coordinate
+    var id: String
+    var categories: [Category]
+
     init() {
+        self.id = ""
         self.name = ""
-        self.address = ""
         self.rating = 0.0
-        self.icon = ""
-        self.reviews = []
+        self.imageUrl = ""
+        self.url = ""
+        self.reviewCount = 0
+        self.coordinates = Coordinate()
+        self.categories = [Category]()
     }
     
     convenience required init?(map: Map) {
@@ -29,21 +35,13 @@ class Restaurant: Mappable {
     }
     
     func mapping(map: Map) {
+        id <- map["id"]
         name <- map["name"]
-        address <- map["address"]
         rating <- map["rating"]
-        icon <- map["icon"]
-        reviews <- map["reviews"]
+        imageUrl <- map["image_url"]
+        url <- map["url"]
+        reviewCount <- map["review_count"]
+        coordinates <- map["coordinates"]
+        categories <- map["categories"]
     }
-    
-    class func testRestaurant() -> Restaurant {
-        let restaurant = Restaurant()
-        restaurant.name = "Bean Mother restaurant"
-        restaurant.address = "255 Hùng Vương, Đà Nẵng, Việt Nam"
-        restaurant.rating = 3.7
-        restaurant.icon = "https://www.w3schools.com/css/paris.jpg"
-        restaurant.reviews = []
-        return restaurant
-    }
-    
 }

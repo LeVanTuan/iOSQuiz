@@ -13,17 +13,20 @@ class Authentication: NSObject, Mappable, NSCoding {
     var accessToken: String
     var tokenType: String
     var expiresIn: Double
+    var updateDate: Date
     
     override init() {
         self.accessToken = ""
         self.tokenType = ""
         self.expiresIn = 0
+        updateDate = Date()
     }
     
     init(accessToken: String, tokenType: String, expresIn: Double) {
         self.accessToken = accessToken
         self.tokenType = tokenType
         self.expiresIn = expresIn
+        self.updateDate = Date()
     }
     
     required public convenience init?(map: Map) {
@@ -50,8 +53,9 @@ class Authentication: NSObject, Mappable, NSCoding {
     }
     
     func isAccessTokenExist() -> Bool {
-        let currentInterval = Date().timeIntervalSince1970
-        if currentInterval <= self.expiresIn {
+        let expiresTimeInterval = self.updateDate.timeIntervalSinceReferenceDate + self.expiresIn
+        let currentTimeInterval = Date().timeIntervalSinceReferenceDate
+        if currentTimeInterval <= expiresTimeInterval {
             return !self.accessToken.isEmpty
         }
         return false

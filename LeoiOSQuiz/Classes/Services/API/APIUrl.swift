@@ -15,5 +15,5 @@ struct APIUrl {
     static let getAccessToken = "https://api.yelp.com/oauth2/token?grant_type=client_credentials&client_id=%@&client_secret=%@"
     
     //Get retaurants
-    static let getRestaurants = "d"
+    static let getRestaurants = "autocomplete"
 }

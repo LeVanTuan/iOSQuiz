@@ -9,6 +9,7 @@
 import UIKit
 import AlamofireImage
 import SnapKit
+import Cosmos
 
 class InforWindowView: UIView {
     
@@ -16,10 +17,8 @@ class InforWindowView: UIView {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var ratingContainer: UIView!
+    @IBOutlet weak var ratingView: CosmosView!
     @IBOutlet weak var reviewLabel: UILabel!
-    
-    var ratingView: RatingView!
     
     var restaurant: Restaurant! {
         didSet {
@@ -33,19 +32,12 @@ class InforWindowView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        initRatingView()
+        configureRatingView()
     }
     
-    func initRatingView() {
-        if ratingView == nil {
-            let ratingView = RatingView.initFromNib()
-            ratingView.translatesAutoresizingMaskIntoConstraints = false
-            ratingContainer.addSubview(ratingView)
-            ratingView.snp.makeConstraints({ (maker) in
-                maker.top.bottom.leading.trailing.equalTo(0)
-            })
-            self.ratingView = ratingView
-        }
+    fileprivate func configureRatingView() {
+        ratingView.settings.minTouchRating = 0
+        ratingView.settings.fillMode = .precise
     }
     
     fileprivate func updateUI() {
@@ -56,7 +48,7 @@ class InforWindowView: UIView {
         addressLabel.text = restaurant.address
         ratingLabel.text = String(restaurant.rating.numberWithOneDecimal)
         reviewLabel.text = String(format: kStringNumberReviews, restaurant.reviews.count)
-        ratingView.rating = restaurant.rating
+        ratingView.rating = Double(restaurant.rating)
     }
     
 }

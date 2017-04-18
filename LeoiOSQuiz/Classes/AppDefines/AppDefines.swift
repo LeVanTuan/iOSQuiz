@@ -23,9 +23,6 @@ enum AuthenKey: String {
 }
 
 struct AppConfigures {
-    static let bearer = "Bearer "
-    static let currentToken = "abc"
-    
     static let clientID = "q7M_efjwPJUL8bz2u6rnZw"
     static let clientSecret = "dv8sxsYAYJ7LTxeRFLDJZ1EGzB7vAqJEkZD25wvGT5m0FRR8nyuAfOWq5c9BLlCD"
 }

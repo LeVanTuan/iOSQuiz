@@ -14,4 +14,5 @@ target 'LeoiOSQuiz' do
   pod 'ObjectMapper'
   pod 'SnapKit'
   pod 'Cosmos'
+  pod 'PKHUD'
 end

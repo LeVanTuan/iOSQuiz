@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -41,6 +41,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLH-jC-wM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="858" y="105"/>
+        </scene>
+        <!--Authentication View Controller-->
+        <scene sceneID="Dfe-h2-Bqb">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationViewController" id="8iK-C1-5bX" customClass="AuthenticationViewController" customModule="LeoiOSQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DTh-Bb-oGt"/>
+                        <viewControllerLayoutGuide type="bottom" id="bol-TL-RJh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iRv-fk-7Wq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authenticating..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Eb-8i-bgk">
+                                <rect key="frame" x="69" y="315.5" width="238.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20784313730000001" green="0.70196078429999997" blue="0.4549019608" alpha="0.17118727992957747" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Eb-8i-bgk" firstAttribute="centerX" secondItem="iRv-fk-7Wq" secondAttribute="centerX" id="D3V-gr-zQH"/>
+                            <constraint firstItem="7Eb-8i-bgk" firstAttribute="centerY" secondItem="iRv-fk-7Wq" secondAttribute="centerY" id="ZAl-Xd-PEI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hR0-1u-f6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="105"/>
         </scene>
     </scenes>
 </document>

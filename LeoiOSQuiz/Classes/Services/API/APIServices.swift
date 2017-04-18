@@ -17,7 +17,7 @@ class APIServices {
         var header = input.headers
         
         if input.isTokenRequired {
-            header["Authorization"] = AppConfigures.bearer + AppConfigures.currentToken
+            header["Authorization"] = AppUserDefaults.authentication.tokenType + " " + AppUserDefaults.authentication.accessToken
         }
         
         return Promise { fulfill, reject in

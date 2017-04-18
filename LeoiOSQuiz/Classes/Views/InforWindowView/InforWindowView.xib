@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,16 +37,21 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4,3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjK-0h-Ixu" userLabel="Rate">
                     <rect key="frame" x="78" y="47.5" width="19.5" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" red="1" green="0.57731935696302017" blue="0.0187469746703115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="1" green="0.37165251972195856" blue="0.052680192117727898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSE-nj-P6Y">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSE-nj-P6Y" customClass="CosmosView" customModule="Cosmos">
                     <rect key="frame" x="99.5" y="48" width="120" height="15"/>
-                    <color key="backgroundColor" red="0.29411764709999999" green="0.80392156859999997" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="YYe-PD-vil"/>
                         <constraint firstAttribute="width" constant="120" id="ZFF-NP-Tzk"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34 Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGW-4e-8wm" userLabel="Reviews">
                     <rect key="frame" x="227.5" y="47.5" width="69.5" height="16"/>
@@ -78,8 +83,8 @@
                 <outlet property="addressLabel" destination="hKD-Mr-1Oe" id="1jo-KW-4Gb"/>
                 <outlet property="imageView" destination="TeA-Ri-jAL" id="PKW-MV-Qq2"/>
                 <outlet property="nameLabel" destination="xVZ-KT-7xW" id="R73-3u-Dbf"/>
-                <outlet property="ratingContainer" destination="sSE-nj-P6Y" id="4qX-VG-1g2"/>
                 <outlet property="ratingLabel" destination="XjK-0h-Ixu" id="FVW-H1-z50"/>
+                <outlet property="ratingView" destination="sSE-nj-P6Y" id="5U1-JX-3oA"/>
                 <outlet property="reviewLabel" destination="MGW-4e-8wm" id="Pnz-Jf-aTE"/>
             </connections>
             <point key="canvasLocation" x="-70.5" y="-172"/>

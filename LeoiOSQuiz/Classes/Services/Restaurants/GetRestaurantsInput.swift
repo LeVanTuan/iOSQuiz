@@ -9,5 +9,5 @@
 import UIKit
 
 class GetRestaurantsInput: APIBaseInput {
-
+    var coordinate: Coordinate
 }

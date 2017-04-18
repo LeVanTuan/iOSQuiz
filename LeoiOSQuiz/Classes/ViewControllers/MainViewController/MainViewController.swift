@@ -15,28 +15,48 @@ class MainViewController: UIViewController {
     var locationManager: CLLocationManager!
     var mapView: GMSMapView!
     var userMarker: GMSMarker?
-    
+    var restaurants: [Restaurant]?
     let services = AuthenticationServices()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         congigureMapView()
         configureUserLocation()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        checkLogin()
+    }
+}
+
+//MARK: - Data
+extension MainViewController {
+    func checkLogin() {
         if !AppUserDefaults.authentication.isAccessTokenExist() {
-            getToken()
+            showAuthenViewController()
+        } else {
+            callAPIGetNearbyRestaurants()
         }
     }
     
-    func getToken() {
-        firstly { () -> Promise<AuthenticationOutput> in
-            let input = AuthenticationInput()
-            return services.getAccessToken(input)
-            }.then { (output) -> Void in
-                print("Token: ",output.authen.accessToken)
-                AppUserDefaults.authentication = output.authen
-            }.catch {(error) in
-                print(error)
-            }.always {
+    func showAuthenViewController() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let authenVC = storyBoard.instantiateViewController(withIdentifier: AuthenticationViewController.className) as! AuthenticationViewController
+        authenVC.modalTransitionStyle = .crossDissolve
+        present(authenVC, animated: true, completion: nil)
+        authenVC.didAuthenticate = { [weak self] (_ success: Bool) in
+            if success {
+                self?.callAPIGetNearbyRestaurants()
+            } else {
+                self?.showAlert(message: AlertVC.AlertMessage.authenFail.rawValue, andTitle: AlertVC.AlertTitle.error.rawValue)
+            }
+        }
+    }
+    
+    func callAPIGetNearbyRestaurants() {
+        firstly { () -> (Promise<GetRestaurantsOutput>) in
+            let input = GetRestaurantsInput(urlString: <#T##String#>, requestType: <#T##HTTPMethod#>, parameters: <#T##[String : Any]?#>)
         }
     }
 }
@@ -64,24 +84,6 @@ extension MainViewController {
     }
 }
 
-//MARK: - Map view delegate
-extension MainViewController: GMSMapViewDelegate {
-    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        let inforView = InforWindowView.initFromNib()
-        inforView.frame = CGRect(x: 0, y: 0, width: (self.view.frame.width - 30), height: 70)
-        inforView.restaurant = Restaurant.testRestaurant()
-        return inforView
-    }
-    
-    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        
-    }
-    
-    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
-        return true
-    }
-}
-
 //MARK: - User location
 extension MainViewController {
     fileprivate func configureUserLocation() {
@@ -100,6 +102,24 @@ extension MainViewController {
 //MARK: - Location Manager Delegate
 extension MainViewController: CLLocationManagerDelegate {
 
+}
+
+//MARK: - Map view delegate
+extension MainViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        let inforView = InforWindowView.initFromNib()
+        inforView.frame = CGRect(x: 0, y: 0, width: (self.view.frame.width - 30), height: 70)
+        inforView.restaurant = Restaurant.testRestaurant()
+        return inforView
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        
+    }
+    
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        return true
+    }
 }
 
 //MARK: - Add a marker
