@@ -9,3 +9,4 @@
 import UIKit
 
 let kDefaultMapZoom: Float = 15.0
+let kMarkerIconWidth: CGFloat = 40

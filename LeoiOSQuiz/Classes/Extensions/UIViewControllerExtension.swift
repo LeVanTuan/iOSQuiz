@@ -10,6 +10,14 @@ import UIKit
 import PKHUD
 
 extension UIViewController {
+    func showInternetIndicator() {
+        
+    }
+    
+    func hideInternetIndicator() {
+        
+    }
+    
     func showLoading() {
         HUD.show(.progress, onView: self.view)
     }

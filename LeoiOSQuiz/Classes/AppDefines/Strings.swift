@@ -13,6 +13,8 @@ let kStringUserLocationTitle = "My Location"
 //reviews
 let kStringNumberReviews = "%d Reviews"
 
+let kStringRestaurant = "Restaurant"
+
 struct AlertVC {
     enum AlertButtonTitle: String {
         case ok = "OK"

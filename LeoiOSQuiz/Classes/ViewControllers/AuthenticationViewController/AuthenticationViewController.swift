@@ -34,8 +34,8 @@ class AuthenticationViewController: UIViewController {
     
     func saveDataAndDismiss(authen: Authentication) {
         print("Token: ",authen.accessToken)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         AppUserDefaults.authentication = authen
-        self.didAuthenticate?(true)
-        self.dismiss(animated: true, completion: nil)
+        appDelegate.setRootIsMainViewController()
     }
 }

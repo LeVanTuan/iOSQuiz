@@ -30,39 +30,21 @@ class MainViewController: UIViewController {
     
     var restaurantMarkers: [GMSMarker]?
     
+    var shouldUpdateRestaurants = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         congigureMapView()
         configureUserLocation()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        checkLogin()
+        handleToCallAPIGetNearbyRestaurants()
     }
 }
 
 //MARK: - Data
 extension MainViewController {
-    func checkLogin() {
-        if !AppUserDefaults.authentication.isAccessTokenExist() {
-            showAuthenViewController()
-        } else {
+    func handleToCallAPIGetNearbyRestaurants() {
+        if shouldUpdateRestaurants {
             callAPIGetNearbyRestaurants()
-        }
-    }
-    
-    func showAuthenViewController() {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let authenVC = storyBoard.instantiateViewController(withIdentifier: AuthenticationViewController.className) as! AuthenticationViewController
-        authenVC.modalTransitionStyle = .crossDissolve
-        present(authenVC, animated: true, completion: nil)
-        authenVC.didAuthenticate = { [weak self] (_ success: Bool) in
-            if success {
-                self?.callAPIGetNearbyRestaurants()
-            } else {
-                self?.showAlert(message: AlertVC.AlertMessage.authenFail.rawValue, andTitle: AlertVC.AlertTitle.error.rawValue)
-            }
         }
     }
     
@@ -73,8 +55,10 @@ extension MainViewController {
             return  restaurantServices.getResaturants(input)
         }.then { [weak self] (output) -> Void in
             self?.restaurants = output.restaurants
+            self?.shouldUpdateRestaurants = false
         }.catch { [weak self] (error) in
             self?.showErrorAlert(message: error.localizedDescription)
+            self?.shouldUpdateRestaurants = false
         }
     }
     
@@ -94,6 +78,23 @@ extension MainViewController {
         sessionManager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
             dataTasks.forEach { $0.cancel() }
         }
+    }
+    
+    fileprivate func restaurantAtMarker(_ marker: GMSMarker) -> Restaurant {
+        var restaurant = Restaurant()
+        guard let restaurantMarkers = restaurantMarkers else {
+            return restaurant
+        }
+        guard let restaurants = restaurants else {
+            return restaurant
+        }
+        for i in 0..<restaurantMarkers.count {
+            if marker == restaurantMarkers[i], i < restaurants.count {
+                restaurant = restaurants[i]
+                break
+            }
+        }
+        return  restaurant
     }
 }
 
@@ -143,19 +144,26 @@ extension MainViewController: CLLocationManagerDelegate {
 
 //MARK: - Map view delegate
 extension MainViewController: GMSMapViewDelegate {
-    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        callAPIGetNearbyRestaurants()
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        shouldUpdateRestaurants = gesture
+    }
+    
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        handleToCallAPIGetNearbyRestaurants()
     }
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        if isUserMarker(marker) {
+            return nil
+        }
         let inforView = InforWindowView.initFromNib()
         inforView.frame = CGRect(x: 0, y: 0, width: (self.view.frame.width - 30), height: 70)
-      //  inforView.restaurant = Restaurant.testRestaurant()
+        inforView.restaurant = restaurantAtMarker(marker)
         return inforView
     }
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        
+        goToDetailRestaurantAtMarker(marker)
     }
     
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
@@ -177,11 +185,16 @@ extension MainViewController {
     }
     
     fileprivate func removeAllMarkers() {
-        restaurantMarkers?.removeAll()
-        self.mapView.clear()
+        clearMapView()
         if let userLocation = userLocation {
             updateCurrentUserMarkerWith(location: userLocation)
         }
+    }
+    
+    fileprivate func clearMapView() {
+        restaurantMarkers?.removeAll()
+        self.mapView.clear()
+        self.userMarker = nil
     }
     
     fileprivate func updateCurrentUserMarkerWith(location: CLLocation) {
@@ -206,13 +219,29 @@ extension MainViewController {
     fileprivate func addAMarkerWithRestaurantInfor(restaurant: Restaurant) -> GMSMarker {
         let marker = GMSMarker()
         marker.title = restaurant.name
-        marker.icon = UIImage(named: "icon_restaurant.pdf")
+        marker.icon = UIImage(named: "icon_restaurant.pdf")?.scaledToSize(size: CGSize(width: kMarkerIconWidth, height: kMarkerIconWidth))
         marker.map = self.mapView
         marker.isFlat = true
         marker.tracksInfoWindowChanges = true
         let coordinate = CLLocationCoordinate2D(latitude: restaurant.coordinates.latitude, longitude: restaurant.coordinates.longtitude)
         marker.position = coordinate
         return marker
+    }
+    
+    fileprivate func isUserMarker(_ marker: GMSMarker) -> Bool {
+        return marker == self.userMarker
+    }
+}
+
+//MARK: - Go to restaurant details
+extension MainViewController {
+    fileprivate func goToDetailRestaurantAtMarker(_ marker: GMSMarker) {
+        let restaurant = restaurantAtMarker(marker)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyBoard.instantiateViewController(withIdentifier: RestaurantDetailsViewController.className) as! RestaurantDetailsViewController
+        detailVC.restaurant = restaurant
+        let navi = UINavigationController(rootViewController: detailVC)
+        present(navi, animated: true, completion: nil)
     }
 }
 

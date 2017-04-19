@@ -10,8 +10,10 @@ import UIKit
 
 class RestaurantDetailsViewController: UIViewController {
 
+    var restaurant: Restaurant!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        self.title = kStringRestaurant
     }
 }
