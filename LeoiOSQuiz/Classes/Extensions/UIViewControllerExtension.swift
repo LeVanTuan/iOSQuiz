@@ -24,8 +24,12 @@ extension UIViewController {
     
     func showAlert(message: String, andTitle title: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil ))
+        alert.addAction(UIAlertAction(title: AlertVC.AlertButtonTitle.ok.rawValue, style: .default, handler: nil ))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showErrorAlert(message: String) {
+        showAlert(message: message, andTitle: AlertVC.AlertTitle.error.rawValue)
     }
 }

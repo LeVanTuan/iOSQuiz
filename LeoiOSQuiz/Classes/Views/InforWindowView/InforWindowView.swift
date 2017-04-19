@@ -41,13 +41,13 @@ class InforWindowView: UIView {
     }
     
     fileprivate func updateUI() {
-        if let downloadURL = URL(string: restaurant.icon) {
+        if let downloadURL = URL(string: restaurant.imageUrl) {
             imageView.af_setImage(withURL: downloadURL)
         }
         nameLabel.text = restaurant.name
-        addressLabel.text = restaurant.address
+        addressLabel.text = restaurant.location.address1
         ratingLabel.text = String(restaurant.rating.numberWithOneDecimal)
-        reviewLabel.text = String(format: kStringNumberReviews, restaurant.reviews.count)
+        reviewLabel.text = String(format: kStringNumberReviews, restaurant.reviewCount)
         ratingView.rating = Double(restaurant.rating)
     }
     

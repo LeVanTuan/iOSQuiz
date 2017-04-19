@@ -24,6 +24,6 @@ class Coordinate: Mappable {
     
     func mapping(map: Map) {
         latitude <- map["latitude"]
-        longtitude <- map["longtitude"]
+        longtitude <- map["longitude"]
     }
 }

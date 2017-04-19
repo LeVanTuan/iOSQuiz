@@ -9,14 +9,26 @@
 import UIKit
 import PromiseKit
 import GoogleMaps
+import Alamofire
+
+//37.786882
+//-122.399972
 
 class MainViewController: UIViewController {
     
     var locationManager: CLLocationManager!
     var mapView: GMSMapView!
     var userMarker: GMSMarker?
-    var restaurants: [Restaurant]?
+    var userLocation: CLLocation?
+    var restaurants: [Restaurant]? {
+        didSet {
+            updateMarkersOnMap(restaurants: restaurants)
+        }
+    }
     let services = AuthenticationServices()
+    let restaurantServices = RestaurantServices()
+    
+    var restaurantMarkers: [GMSMarker]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +67,32 @@ extension MainViewController {
     }
     
     func callAPIGetNearbyRestaurants() {
-        firstly { () -> (Promise<GetRestaurantsOutput>) in
-            let input = GetRestaurantsInput(urlString: <#T##String#>, requestType: <#T##HTTPMethod#>, parameters: <#T##[String : Any]?#>)
+        cancelRequests()
+        firstly { () -> Promise<GetRestaurantsOutput> in
+            let input = inputGetRestaurants()
+            return  restaurantServices.getResaturants(input)
+        }.then { [weak self] (output) -> Void in
+            self?.restaurants = output.restaurants
+        }.catch { [weak self] (error) in
+            self?.showErrorAlert(message: error.localizedDescription)
+        }
+    }
+    
+    fileprivate func inputGetRestaurants() -> GetRestaurantsInput {
+        let centerCoordinate = self.centerCoodinate()
+        let input = GetRestaurantsInput(latitude: centerCoordinate.latitude, longitude: centerCoordinate.longitude)
+        return input
+    }
+    
+    fileprivate func centerCoodinate() -> CLLocationCoordinate2D {
+        let center = self.mapView.center
+        return self.mapView.projection.coordinate(for: center)
+    }
+    
+    fileprivate func cancelRequests() {
+        let sessionManager = Alamofire.SessionManager.default
+        sessionManager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
+            dataTasks.forEach { $0.cancel() }
         }
     }
 }
@@ -79,7 +115,8 @@ extension MainViewController {
         }
         if change[NSKeyValueChangeKey.oldKey] == nil {
             let location = change[NSKeyValueChangeKey.newKey] as! CLLocation
-            updateCurrentMarkerWith(location: location)
+            userLocation = location
+            updateCurrentUserMarkerWith(location: location)
         }
     }
 }
@@ -106,10 +143,14 @@ extension MainViewController: CLLocationManagerDelegate {
 
 //MARK: - Map view delegate
 extension MainViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        callAPIGetNearbyRestaurants()
+    }
+    
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         let inforView = InforWindowView.initFromNib()
         inforView.frame = CGRect(x: 0, y: 0, width: (self.view.frame.width - 30), height: 70)
-        inforView.restaurant = Restaurant.testRestaurant()
+      //  inforView.restaurant = Restaurant.testRestaurant()
         return inforView
     }
     
@@ -124,7 +165,26 @@ extension MainViewController: GMSMapViewDelegate {
 
 //MARK: - Add a marker
 extension MainViewController {
-    fileprivate func updateCurrentMarkerWith(location: CLLocation) {
+    fileprivate func updateMarkersOnMap(restaurants: [Restaurant]?) {
+        removeAllMarkers()
+        guard let restaurants = restaurants else {
+            return
+        }
+        restaurantMarkers = [GMSMarker]()
+        for restaurant in restaurants {
+             restaurantMarkers?.append(addAMarkerWithRestaurantInfor(restaurant: restaurant))
+        }
+    }
+    
+    fileprivate func removeAllMarkers() {
+        restaurantMarkers?.removeAll()
+        self.mapView.clear()
+        if let userLocation = userLocation {
+            updateCurrentUserMarkerWith(location: userLocation)
+        }
+    }
+    
+    fileprivate func updateCurrentUserMarkerWith(location: CLLocation) {
         if self.userMarker == nil {
             let marker = newUserMarker()
             self.userMarker = marker
@@ -140,6 +200,18 @@ extension MainViewController {
         marker.map = self.mapView
         marker.isFlat = true
         marker.tracksInfoWindowChanges = true
+        return marker
+    }
+    
+    fileprivate func addAMarkerWithRestaurantInfor(restaurant: Restaurant) -> GMSMarker {
+        let marker = GMSMarker()
+        marker.title = restaurant.name
+        marker.icon = UIImage(named: "icon_restaurant.pdf")
+        marker.map = self.mapView
+        marker.isFlat = true
+        marker.tracksInfoWindowChanges = true
+        let coordinate = CLLocationCoordinate2D(latitude: restaurant.coordinates.latitude, longitude: restaurant.coordinates.longtitude)
+        marker.position = coordinate
         return marker
     }
 }
