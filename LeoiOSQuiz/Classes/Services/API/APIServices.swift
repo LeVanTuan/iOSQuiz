@@ -14,10 +14,10 @@ import PromiseKit
 
 class APIServices {
     func request<T: Mappable>(_ input: APIBaseInput) -> Promise<T> {
-        var header = input.headers
+        var headers = input.headers
         
         if input.isTokenRequired {
-            header["Authorization"] = AppUserDefaults.authentication.tokenType + " " + AppUserDefaults.authentication.accessToken
+            headers["Authorization"] = AppUserDefaults.authentication.tokenType + " " + AppUserDefaults.authentication.accessToken
         }
         
         return Promise { fulfill, reject in
@@ -25,7 +25,7 @@ class APIServices {
                               method: input.requestType,
                               parameters: input.parameters,
                               encoding: input.encoding,
-                              headers: input.headers)
+                              headers: headers)
             .validate(statusCode: 200..<600)
             .responseJSON { (response) in
                 switch response.result {

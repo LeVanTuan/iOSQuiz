@@ -10,5 +10,20 @@ import UIKit
 import ObjectMapper
 
 class GetRestaurantsOutput: APIBaseOutput {
-
+    var restaurants: [Restaurant]
+    
+    override init() {
+        restaurants = [Restaurant]()
+        super.init()
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    override func mapping(map: Map) {
+        super.mapping(map: map)
+        restaurants <- map["businesses"]
+    }
+    
 }

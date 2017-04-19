@@ -9,5 +9,16 @@
 import UIKit
 
 class GetRestaurantsInput: APIBaseInput {
-    var coordinate: Coordinate
+    
+    init (latitude: Double, longitude: Double) {
+        let params: [String : Any] = [
+            "term" : "delis",
+            "latitude" : latitude,
+            "longitude" : longitude
+        ]
+        super.init(urlString: APIUrl.getRestaurants,
+                   requestType: .get,
+                   parameters: params)
+    }
+    
 }
