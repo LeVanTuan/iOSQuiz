@@ -8,16 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		510C8AE51EA5B54000E45398 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C8AE41EA5B54000E45398 /* UIViewControllerExtension.swift */; };
+		511DDCB71EA85A670054D5C6 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511DDCB61EA85A670054D5C6 /* Review.swift */; };
+		511DDCB91EA85A970054D5C6 /* ReviewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511DDCB81EA85A970054D5C6 /* ReviewUser.swift */; };
+		511DDCC01EA865910054D5C6 /* InforWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511DDCBE1EA865910054D5C6 /* InforWindowView.swift */; };
+		511DDCC11EA865910054D5C6 /* InforWindowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511DDCBF1EA865910054D5C6 /* InforWindowView.xib */; };
+		511DDCC41EA865B10054D5C6 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511DDCC21EA865B10054D5C6 /* ReviewCell.swift */; };
+		511DDCC51EA865B10054D5C6 /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511DDCC31EA865B10054D5C6 /* ReviewCell.xib */; };
 		5120F0C61EA5ED4A00E7201D /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5120F0C51EA5ED4A00E7201D /* Coordinate.swift */; };
 		5120F0C81EA5EDE500E7201D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5120F0C71EA5EDE500E7201D /* Category.swift */; };
 		5157DE1C1EA73E600057C085 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157DE1B1EA73E600057C085 /* Location.swift */; };
-		518C5F461EA4716E0035F79B /* InforWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F451EA4716E0035F79B /* InforWindowView.swift */; };
 		518C5F4B1EA471F70035F79B /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F4A1EA471F70035F79B /* NSObjectExtensions.swift */; };
-		518C5F4D1EA473600035F79B /* InforWindowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 518C5F4C1EA473600035F79B /* InforWindowView.xib */; };
 		518C5F4F1EA473970035F79B /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F4E1EA473970035F79B /* Restaurant.swift */; };
 		518C5F581EA4A9760035F79B /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F571EA4A9760035F79B /* FloatExtension.swift */; };
 		518C5F5A1EA4C4D50035F79B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F591EA4C4D50035F79B /* UIImageExtension.swift */; };
 		518EC5331EA5C694000F60C0 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EC5311EA5C694000F60C0 /* AuthenticationViewController.swift */; };
+		51C287D81EA8AFC400863B26 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C287D71EA8AFC400863B26 /* RestaurantDetailHeaderView.swift */; };
+		51C287DA1EA8AFCE00863B26 /* RestaurantDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C287D91EA8AFCE00863B26 /* RestaurantDetailHeaderView.xib */; };
 		84A130741EA1A86C005F21BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A130721EA1A86C005F21BF /* Main.storyboard */; };
 		84A130761EA1A86C005F21BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A130751EA1A86C005F21BF /* Assets.xcassets */; };
 		84A130791EA1A86C005F21BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A130771EA1A86C005F21BF /* LaunchScreen.storyboard */; };
@@ -49,16 +55,22 @@
 /* Begin PBXFileReference section */
 		1DB372B962502C1B22FCD973 /* Pods-LeoiOSQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeoiOSQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeoiOSQuiz/Pods-LeoiOSQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		510C8AE41EA5B54000E45398 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		511DDCB61EA85A670054D5C6 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		511DDCB81EA85A970054D5C6 /* ReviewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewUser.swift; sourceTree = "<group>"; };
+		511DDCBE1EA865910054D5C6 /* InforWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforWindowView.swift; sourceTree = "<group>"; };
+		511DDCBF1EA865910054D5C6 /* InforWindowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InforWindowView.xib; sourceTree = "<group>"; };
+		511DDCC21EA865B10054D5C6 /* ReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		511DDCC31EA865B10054D5C6 /* ReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
 		5120F0C51EA5ED4A00E7201D /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		5120F0C71EA5EDE500E7201D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5157DE1B1EA73E600057C085 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		518C5F451EA4716E0035F79B /* InforWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforWindowView.swift; sourceTree = "<group>"; };
 		518C5F4A1EA471F70035F79B /* NSObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
-		518C5F4C1EA473600035F79B /* InforWindowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InforWindowView.xib; sourceTree = "<group>"; };
 		518C5F4E1EA473970035F79B /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		518C5F571EA4A9760035F79B /* FloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
 		518C5F591EA4C4D50035F79B /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		518EC5311EA5C694000F60C0 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		51C287D71EA8AFC400863B26 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
+		51C287D91EA8AFCE00863B26 /* RestaurantDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantDetailHeaderView.xib; sourceTree = "<group>"; };
 		5F05D38E7B2E661E781DB3EE /* Pods_LeoiOSQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeoiOSQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A1306B1EA1A86C005F21BF /* LeoiOSQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeoiOSQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A130731EA1A86C005F21BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,23 +122,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		518C5F431EA4711A0035F79B /* Views */ = {
+		511DDCBA1EA865910054D5C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				518C5F441EA4715B0035F79B /* InforWindowView */,
+				511DDCBB1EA865910054D5C6 /* Cells */,
+				511DDCBD1EA865910054D5C6 /* InforWindowView */,
+				51C287D61EA8AFAE00863B26 /* RestaurantDetailHeaderView */,
 			);
 			path = Views;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
-		518C5F441EA4715B0035F79B /* InforWindowView */ = {
+		511DDCBB1EA865910054D5C6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				518C5F451EA4716E0035F79B /* InforWindowView.swift */,
-				518C5F4C1EA473600035F79B /* InforWindowView.xib */,
+				511DDCBC1EA865910054D5C6 /* ReviewCell */,
 			);
-			name = InforWindowView;
-			path = LeoiOSQuiz/Classes/Views/InforWindowView;
-			sourceTree = SOURCE_ROOT;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		511DDCBC1EA865910054D5C6 /* ReviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				511DDCC21EA865B10054D5C6 /* ReviewCell.swift */,
+				511DDCC31EA865B10054D5C6 /* ReviewCell.xib */,
+			);
+			path = ReviewCell;
+			sourceTree = "<group>";
+		};
+		511DDCBD1EA865910054D5C6 /* InforWindowView */ = {
+			isa = PBXGroup;
+			children = (
+				511DDCBE1EA865910054D5C6 /* InforWindowView.swift */,
+				511DDCBF1EA865910054D5C6 /* InforWindowView.xib */,
+			);
+			path = InforWindowView;
+			sourceTree = "<group>";
 		};
 		518C5F471EA471880035F79B /* Extensions */ = {
 			isa = PBXGroup;
@@ -145,6 +175,15 @@
 				518EC5311EA5C694000F60C0 /* AuthenticationViewController.swift */,
 			);
 			path = AuthenticationViewController;
+			sourceTree = "<group>";
+		};
+		51C287D61EA8AFAE00863B26 /* RestaurantDetailHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				51C287D71EA8AFC400863B26 /* RestaurantDetailHeaderView.swift */,
+				51C287D91EA8AFCE00863B26 /* RestaurantDetailHeaderView.xib */,
+			);
+			path = RestaurantDetailHeaderView;
 			sourceTree = "<group>";
 		};
 		84A130621EA1A86C005F21BF = {
@@ -186,7 +225,7 @@
 				84A130821EA1DE17005F21BF /* AppDelegate */,
 				84A130851EA1DE17005F21BF /* Services */,
 				84A130841EA1DE17005F21BF /* Models */,
-				518C5F431EA4711A0035F79B /* Views */,
+				511DDCBA1EA865910054D5C6 /* Views */,
 				84A130861EA1DE17005F21BF /* ViewControllers */,
 			);
 			path = Classes;
@@ -218,6 +257,8 @@
 				5120F0C51EA5ED4A00E7201D /* Coordinate.swift */,
 				5120F0C71EA5EDE500E7201D /* Category.swift */,
 				5157DE1B1EA73E600057C085 /* Location.swift */,
+				511DDCB61EA85A670054D5C6 /* Review.swift */,
+				511DDCB81EA85A970054D5C6 /* ReviewUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -375,7 +416,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A130791EA1A86C005F21BF /* LaunchScreen.storyboard in Resources */,
-				518C5F4D1EA473600035F79B /* InforWindowView.xib in Resources */,
+				51C287DA1EA8AFCE00863B26 /* RestaurantDetailHeaderView.xib in Resources */,
+				511DDCC51EA865B10054D5C6 /* ReviewCell.xib in Resources */,
+				511DDCC11EA865910054D5C6 /* InforWindowView.xib in Resources */,
 				84A130761EA1A86C005F21BF /* Assets.xcassets in Resources */,
 				84A130741EA1A86C005F21BF /* Main.storyboard in Resources */,
 			);
@@ -426,7 +469,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -442,27 +485,31 @@
 				84EF397F1EA3AFC50075182F /* AuthenticationAPIProtocol.swift in Sources */,
 				5120F0C81EA5EDE500E7201D /* Category.swift in Sources */,
 				84A130AF1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift in Sources */,
+				511DDCC41EA865B10054D5C6 /* ReviewCell.swift in Sources */,
 				84A130A11EA210A7005F21BF /* APIUrl.swift in Sources */,
 				84A130A31EA21169005F21BF /* RestaurantServices.swift in Sources */,
 				84EF39811EA3AFE60075182F /* AuthenticationServices.swift in Sources */,
 				84A130991EA20DA4005F21BF /* APIServices.swift in Sources */,
-				518C5F461EA4716E0035F79B /* InforWindowView.swift in Sources */,
 				84A1308B1EA1DE2D005F21BF /* AppDefines.swift in Sources */,
 				518EC5331EA5C694000F60C0 /* AuthenticationViewController.swift in Sources */,
 				518C5F581EA4A9760035F79B /* FloatExtension.swift in Sources */,
 				518C5F4F1EA473970035F79B /* Restaurant.swift in Sources */,
 				84A1308D1EA1DE41005F21BF /* Strings.swift in Sources */,
 				518C5F4B1EA471F70035F79B /* NSObjectExtensions.swift in Sources */,
+				511DDCB71EA85A670054D5C6 /* Review.swift in Sources */,
 				510C8AE51EA5B54000E45398 /* UIViewControllerExtension.swift in Sources */,
 				84A130A71EA211AE005F21BF /* GetRestaurantsOutput.swift in Sources */,
+				511DDCC01EA865910054D5C6 /* InforWindowView.swift in Sources */,
 				84A130AD1EA2199B005F21BF /* GetRestaurantReviewsInput.swift in Sources */,
 				84EF39831EA3AFF70075182F /* AuthenticationInput.swift in Sources */,
 				84EF39851EA3B0100075182F /* AuthenticationOutput.swift in Sources */,
 				84A130891EA1DE17005F21BF /* AppDelegate.swift in Sources */,
 				84A1308F1EA1DE4E005F21BF /* Constants.swift in Sources */,
 				84A1309F1EA2109E005F21BF /* APIBaseOutput.swift in Sources */,
+				511DDCB91EA85A970054D5C6 /* ReviewUser.swift in Sources */,
 				84A1309D1EA21091005F21BF /* APIBaseInput.swift in Sources */,
 				518C5F5A1EA4C4D50035F79B /* UIImageExtension.swift in Sources */,
+				51C287D81EA8AFC400863B26 /* RestaurantDetailHeaderView.swift in Sources */,
 				84A130AB1EA21821005F21BF /* RestaurantAPIProtocol.swift in Sources */,
 				84A130931EA1DF68005F21BF /* MainViewController.swift in Sources */,
 				84A130A91EA216F8005F21BF /* ResponseError.swift in Sources */,

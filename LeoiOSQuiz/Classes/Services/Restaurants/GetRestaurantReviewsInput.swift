@@ -9,5 +9,11 @@
 import UIKit
 
 class GetRestaurantReviewsInput: APIBaseInput {
-
+    
+    init (restaurantID: String) {
+        let uslString = String(format: APIUrl.getRestaurantReviews, restaurantID)
+        super.init(urlString: uslString,
+                   requestType: .get,
+                   parameters: nil)
+    }
 }

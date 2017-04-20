@@ -50,15 +50,18 @@ extension MainViewController {
     
     func callAPIGetNearbyRestaurants() {
         cancelRequests()
+        showInternetIndicator()
         firstly { () -> Promise<GetRestaurantsOutput> in
             let input = inputGetRestaurants()
             return  restaurantServices.getResaturants(input)
         }.then { [weak self] (output) -> Void in
             self?.restaurants = output.restaurants
             self?.shouldUpdateRestaurants = false
+            self?.hideInternetIndicator()
         }.catch { [weak self] (error) in
             self?.showErrorAlert(message: error.localizedDescription)
             self?.shouldUpdateRestaurants = false
+            self?.hideInternetIndicator()
         }
     }
     
@@ -130,7 +133,6 @@ extension MainViewController {
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-        locationManager.delegate = self
         if mapView != nil, let location = locationManager.location {
             mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: kDefaultMapZoom, bearing: 0, viewingAngle: 0)
         }
@@ -167,8 +169,15 @@ extension MainViewController: GMSMapViewDelegate {
     }
     
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        if let location = locationManager.location {
+            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: kDefaultMapZoom, bearing: 0, viewingAngle: 0)
+        }
         return true
     }
+}
+
+//MARK: - Location manager 
+extension MainViewController {
 }
 
 //MARK: - Add a marker

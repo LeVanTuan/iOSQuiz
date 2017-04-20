@@ -14,6 +14,7 @@ let kStringUserLocationTitle = "My Location"
 let kStringNumberReviews = "%d Reviews"
 
 let kStringRestaurant = "Restaurant"
+let kStringDismiss = "Dismiss"
 
 struct AlertVC {
     enum AlertButtonTitle: String {

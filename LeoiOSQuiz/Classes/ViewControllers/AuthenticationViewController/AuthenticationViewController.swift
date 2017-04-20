@@ -21,14 +21,17 @@ class AuthenticationViewController: UIViewController {
     }
     
     func getToken() {
+        showInternetIndicator()
         firstly { () -> Promise<AuthenticationOutput> in
             let input = AuthenticationInput()
             return services.getAccessToken(input)
             }.then(execute: { [weak self] (output) -> Void in
                 self?.saveDataAndDismiss(authen: output.authen)
+                self?.hideInternetIndicator()
             }).catch { [weak self] (error) in
                 print(error)
                 self?.didAuthenticate?(false)
+                self?.hideInternetIndicator()
         }
     }
     

@@ -11,4 +11,22 @@ import ObjectMapper
 
 class GetRestaurantReviewsOutput: APIBaseOutput {
 
+    var reviews: [Review]
+    
+    override init() {
+        reviews = [Review]()
+        super.init()
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    override func mapping(map: Map) {
+        super.mapping(map: map)
+        reviews <- map["reviews"]
+    }
+    
+    
+    
 }

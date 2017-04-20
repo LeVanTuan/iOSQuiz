@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,13 +15,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TeA-Ri-jAL">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TeA-Ri-jAL">
                     <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="TeA-Ri-jAL" secondAttribute="height" multiplier="1:1" id="9aA-HF-nyX"/>
                     </constraints>
                 </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5y7-xB-qAr">
+                    <rect key="frame" x="25" y="25" width="20" height="20"/>
+                </activityIndicatorView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVZ-KT-7xW">
                     <rect key="frame" x="78" y="4" width="289" height="18"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
@@ -53,39 +56,33 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34 Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGW-4e-8wm" userLabel="Reviews">
-                    <rect key="frame" x="207.5" y="43.5" width="69.5" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="sSE-nj-P6Y" firstAttribute="leading" secondItem="XjK-0h-Ixu" secondAttribute="trailing" constant="2" id="5a4-8b-auk"/>
-                <constraint firstItem="MGW-4e-8wm" firstAttribute="centerY" secondItem="XjK-0h-Ixu" secondAttribute="centerY" id="5pS-2u-1qN"/>
                 <constraint firstItem="TeA-Ri-jAL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="C3L-k9-Jzl"/>
                 <constraint firstItem="xVZ-KT-7xW" firstAttribute="leading" secondItem="TeA-Ri-jAL" secondAttribute="trailing" constant="8" id="LLq-S3-ET3"/>
                 <constraint firstItem="xVZ-KT-7xW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="PWt-OH-OyR"/>
                 <constraint firstItem="hKD-Mr-1Oe" firstAttribute="trailing" secondItem="xVZ-KT-7xW" secondAttribute="trailing" id="X7L-va-L5Y"/>
                 <constraint firstAttribute="trailing" secondItem="xVZ-KT-7xW" secondAttribute="trailing" constant="8" id="bOy-ou-Cgy"/>
+                <constraint firstItem="5y7-xB-qAr" firstAttribute="centerX" secondItem="TeA-Ri-jAL" secondAttribute="centerX" id="e0x-3B-GOj"/>
                 <constraint firstItem="hKD-Mr-1Oe" firstAttribute="top" secondItem="xVZ-KT-7xW" secondAttribute="bottom" constant="2" id="fFi-Yb-1r0"/>
+                <constraint firstItem="5y7-xB-qAr" firstAttribute="centerY" secondItem="TeA-Ri-jAL" secondAttribute="centerY" id="iMK-fO-Qfb"/>
                 <constraint firstAttribute="bottom" secondItem="TeA-Ri-jAL" secondAttribute="bottom" id="k5F-77-TsG"/>
                 <constraint firstItem="XjK-0h-Ixu" firstAttribute="top" secondItem="hKD-Mr-1Oe" secondAttribute="bottom" constant="5" id="kUJ-rv-mdm"/>
                 <constraint firstItem="hKD-Mr-1Oe" firstAttribute="leading" secondItem="xVZ-KT-7xW" secondAttribute="leading" id="kwm-av-sxl"/>
                 <constraint firstItem="sSE-nj-P6Y" firstAttribute="centerY" secondItem="XjK-0h-Ixu" secondAttribute="centerY" id="lQq-EX-Qdy"/>
                 <constraint firstItem="TeA-Ri-jAL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mnv-tN-fvi"/>
                 <constraint firstItem="XjK-0h-Ixu" firstAttribute="leading" secondItem="xVZ-KT-7xW" secondAttribute="leading" id="oxb-Fr-Ja3"/>
-                <constraint firstItem="MGW-4e-8wm" firstAttribute="leading" secondItem="sSE-nj-P6Y" secondAttribute="trailing" constant="8" id="t8d-iU-GjK"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="activityView" destination="5y7-xB-qAr" id="YED-aG-fo3"/>
                 <outlet property="addressLabel" destination="hKD-Mr-1Oe" id="1jo-KW-4Gb"/>
                 <outlet property="imageView" destination="TeA-Ri-jAL" id="PKW-MV-Qq2"/>
                 <outlet property="nameLabel" destination="xVZ-KT-7xW" id="R73-3u-Dbf"/>
                 <outlet property="ratingLabel" destination="XjK-0h-Ixu" id="FVW-H1-z50"/>
                 <outlet property="ratingView" destination="sSE-nj-P6Y" id="5U1-JX-3oA"/>
-                <outlet property="reviewLabel" destination="MGW-4e-8wm" id="Pnz-Jf-aTE"/>
             </connections>
             <point key="canvasLocation" x="-70.5" y="-172"/>
         </view>

@@ -14,11 +14,11 @@ import Cosmos
 class InforWindowView: UIView {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
-    @IBOutlet weak var reviewLabel: UILabel!
     
     var restaurant: Restaurant! {
         didSet {
@@ -33,6 +33,7 @@ class InforWindowView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         configureRatingView()
+        activityView.hidesWhenStopped = true
     }
     
     fileprivate func configureRatingView() {
@@ -42,13 +43,28 @@ class InforWindowView: UIView {
     
     fileprivate func updateUI() {
         if let downloadURL = URL(string: restaurant.imageUrl) {
-            imageView.af_setImage(withURL: downloadURL)
+            handleActivityIndicatorView(start: true)
+            imageView.af_setImage(withURL: downloadURL,
+                                  placeholderImage: nil,
+                                  filter: nil,
+                                  progress: nil,
+                                  progressQueue: DispatchQueue.global(),
+                                  imageTransition: UIImageView.ImageTransition.curlDown(1.0),
+                                  runImageTransitionIfCached: true, completion: { [weak self] (image) in
+                self?.handleActivityIndicatorView(start: false)
+            })
         }
         nameLabel.text = restaurant.name
-        addressLabel.text = restaurant.location.address1
+        addressLabel.text = restaurant.location.fullAddress()
         ratingLabel.text = String(restaurant.rating.numberWithOneDecimal)
-        reviewLabel.text = String(format: kStringNumberReviews, restaurant.reviewCount)
         ratingView.rating = Double(restaurant.rating)
     }
     
+    func handleActivityIndicatorView(start: Bool) {
+        if start {
+            activityView.startAnimating()
+        } else {
+            activityView.stopAnimating()
+        }
+    }
 }

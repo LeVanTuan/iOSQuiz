@@ -43,4 +43,7 @@ class Location: Mappable {
         zipCode <- map["zip_code"]
     }
     
+    func fullAddress() -> String {
+        return address1 + ", " + city + ", " + state + ", " + country
+    }
 }

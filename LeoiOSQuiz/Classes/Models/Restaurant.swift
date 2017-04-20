@@ -22,6 +22,7 @@ class Restaurant: Mappable {
     var coordinates : Coordinate
     var categories: [Category]
     var location: Location
+    var reviews: [Review]
     
     init() {
         self.id = ""
@@ -35,6 +36,7 @@ class Restaurant: Mappable {
         self.coordinates = Coordinate()
         self.categories = [Category]()
         self.location = Location()
+        self.reviews = [Review]()
     }
     
     convenience required init?(map: Map) {

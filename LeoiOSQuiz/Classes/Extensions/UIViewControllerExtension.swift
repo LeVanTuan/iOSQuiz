@@ -11,11 +11,11 @@ import PKHUD
 
 extension UIViewController {
     func showInternetIndicator() {
-        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
     func hideInternetIndicator() {
-        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
     func showLoading() {

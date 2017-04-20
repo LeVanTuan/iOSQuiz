@@ -16,4 +16,5 @@ struct APIUrl {
     
     //Get retaurants
     static let getRestaurants = endPoint + "businesses/search"
+    static let getRestaurantReviews = endPoint + "businesses/%@/reviews"
 }
