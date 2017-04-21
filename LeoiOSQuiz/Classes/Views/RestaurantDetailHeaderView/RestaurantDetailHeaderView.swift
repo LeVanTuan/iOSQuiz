@@ -34,17 +34,24 @@ class RestaurantDetailHeaderView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        configureRatingView()
+    }
+    
+    fileprivate func configureRatingView() {
+        rateView.settings.minTouchRating = 0
+        rateView.settings.fillMode = .precise
     }
     
     fileprivate func updateRestaurantBaseInforIntoUI() {
         if let url = URL(string: restaurant.imageUrl) {
             coverImageView.af_setImage(withURL: url)
         }
-        nameLabel.text = restaurant.name
-        rateLabel.text = String(restaurant.rating.numberWithOneDecimal)
+        nameLabel.text = restaurant.name.isEmpty == false ? restaurant.name : kStringSpace
+        rateLabel.text = String(restaurant.rating.numberWithOneDecimal) 
         rateView.rating = Double(restaurant.rating)
-        addressLabel.text = restaurant.location.fullAddress()
-        phoneLabel.text = restaurant.phone
+        let address = restaurant.location.fullAddress()
+        addressLabel.text = address.isEmpty == false ? address : kStringSpace
+        phoneLabel.text = restaurant.phone.isEmpty == false ? restaurant.phone : kStringSpace
     }
     
     func updateReviews(count: Int) {

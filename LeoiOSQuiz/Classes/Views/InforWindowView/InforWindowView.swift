@@ -45,7 +45,7 @@ class InforWindowView: UIView {
         if let downloadURL = URL(string: restaurant.imageUrl) {
             handleActivityIndicatorView(start: true)
             imageView.af_setImage(withURL: downloadURL,
-                                  placeholderImage: nil,
+                                  placeholderImage: UIImage(named: "image_small_place.pdf"),
                                   filter: nil,
                                   progress: nil,
                                   progressQueue: DispatchQueue.global(),
@@ -54,8 +54,9 @@ class InforWindowView: UIView {
                 self?.handleActivityIndicatorView(start: false)
             })
         }
-        nameLabel.text = restaurant.name
-        addressLabel.text = restaurant.location.fullAddress()
+        nameLabel.text = restaurant.name.isEmpty == false ? restaurant.name : kStringSpace
+        let address = restaurant.location.fullAddress()
+        addressLabel.text = address.isEmpty == false ? address : kStringSpace
         ratingLabel.text = String(restaurant.rating.numberWithOneDecimal)
         ratingView.rating = Double(restaurant.rating)
     }

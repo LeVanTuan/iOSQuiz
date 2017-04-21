@@ -46,9 +46,7 @@ class ReviewCell: UITableViewCell {
     
     fileprivate func updateData() {
         if let avatarUrl = URL(string:review.user.imageUrl) {
-            avatar.af_setImage(withURL: avatarUrl)
-        } else {
-            avatar.image = nil
+            avatar.af_setImage(withURL: avatarUrl, placeholderImage: UIImage(named: "icon_user.pdf"), filter: nil, progress: nil, progressQueue: DispatchQueue.global(), imageTransition: UIImageView.ImageTransition.crossDissolve(0.2), runImageTransitionIfCached: true, completion: nil)
         }
         nameLabel.text = review.user.name
         timeLabel.text = review.timeCreated
