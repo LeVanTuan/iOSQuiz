@@ -15,8 +15,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="455"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OIX-HS-aRY" userLabel="Cover Image View">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_big_place" translatesAutoresizingMaskIntoConstraints="NO" id="OIX-HS-aRY" userLabel="Cover Image View">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <color key="backgroundColor" white="1" alpha="0.77280479753521125" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="250" id="asy-7Y-J6E"/>
                     </constraints>
@@ -163,11 +164,12 @@
                 <outlet property="rateView" destination="6zG-i2-y3M" id="0sR-aI-hjD"/>
                 <outlet property="reviewLabel" destination="XA8-z6-mWP" id="tFm-Ha-NuX"/>
             </connections>
-            <point key="canvasLocation" x="128.5" y="272.5"/>
+            <point key="canvasLocation" x="55" y="119"/>
         </view>
     </objects>
     <resources>
         <image name="icon_phone" width="18" height="17"/>
         <image name="icon_place" width="12" height="17"/>
+        <image name="image_big_place" width="1125" height="750"/>
     </resources>
 </document>

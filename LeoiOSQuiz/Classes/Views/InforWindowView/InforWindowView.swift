@@ -49,7 +49,7 @@ class InforWindowView: UIView {
                                   filter: nil,
                                   progress: nil,
                                   progressQueue: DispatchQueue.global(),
-                                  imageTransition: UIImageView.ImageTransition.curlDown(1.0),
+                                  imageTransition: UIImageView.ImageTransition.curlDown(0.5),
                                   runImageTransitionIfCached: true, completion: { [weak self] (image) in
                 self?.handleActivityIndicatorView(start: false)
             })

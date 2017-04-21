@@ -218,7 +218,7 @@ extension MainViewController {
     fileprivate func newUserMarker() -> GMSMarker {
         let marker = GMSMarker()
         marker.title = kStringUserLocationTitle
-        marker.icon = UIImage(named: "icon_user_marker")
+        marker.icon = UIImage(named: "icon_user_marker")?.scaledToSize(size: CGSize(width: kMarkerIconWidth, height: kMarkerIconWidth))
         marker.map = self.mapView
         marker.isFlat = true
         marker.tracksInfoWindowChanges = true
