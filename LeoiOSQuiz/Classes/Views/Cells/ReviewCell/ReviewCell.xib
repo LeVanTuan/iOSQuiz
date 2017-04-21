@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="207" id="KGk-i7-Jjw" customClass="ReviewCell" customModule="LeoiOSQuiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="207"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="206.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_user" translatesAutoresizingMaskIntoConstraints="NO" id="LBz-gv-Qvb">
+                        <rect key="frame" x="15" y="8" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="Y8S-9Y-vSR"/>
+                            <constraint firstAttribute="height" constant="30" id="iLX-nF-feY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcD-RF-JfU" userLabel="Name Label ">
+                        <rect key="frame" x="53" y="8" width="252" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Waf-FG-Qky" userLabel="Time Label">
+                        <rect key="frame" x="53" y="28" width="252" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.2610414809513586" green="0.2610414809513586" blue="0.2610414809513586" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxd-20-H8J" customClass="CosmosView" customModule="Cosmos">
+                        <rect key="frame" x="53" y="43.5" width="100" height="15"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="Kdf-Np-scR"/>
+                            <constraint firstAttribute="height" constant="15" id="LzZ-RZ-I2M"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJq-70-xoF" userLabel="Content Label">
+                        <rect key="frame" x="53" y="60.5" width="252" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nxd-20-H8J" firstAttribute="top" secondItem="Waf-FG-Qky" secondAttribute="bottom" constant="2" id="4YK-F7-0q1"/>
+                    <constraint firstItem="Waf-FG-Qky" firstAttribute="trailing" secondItem="IcD-RF-JfU" secondAttribute="trailing" id="65p-i5-530"/>
+                    <constraint firstItem="LBz-gv-Qvb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="6KO-lU-BFA"/>
+                    <constraint firstItem="Waf-FG-Qky" firstAttribute="leading" secondItem="IcD-RF-JfU" secondAttribute="leading" id="HAq-RU-YFV"/>
+                    <constraint firstItem="IcD-RF-JfU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="MoT-iw-eof"/>
+                    <constraint firstItem="KJq-70-xoF" firstAttribute="top" secondItem="nxd-20-H8J" secondAttribute="bottom" constant="2" id="NsM-xY-WME"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KJq-70-xoF" secondAttribute="bottom" priority="750" constant="4" id="Tvo-At-Bab"/>
+                    <constraint firstItem="Waf-FG-Qky" firstAttribute="top" secondItem="IcD-RF-JfU" secondAttribute="bottom" constant="2" id="Y9v-9F-3Qt"/>
+                    <constraint firstItem="IcD-RF-JfU" firstAttribute="leading" secondItem="LBz-gv-Qvb" secondAttribute="trailing" constant="8" id="fWy-Ua-eic"/>
+                    <constraint firstItem="nxd-20-H8J" firstAttribute="leading" secondItem="IcD-RF-JfU" secondAttribute="leading" id="gfb-6w-ofh"/>
+                    <constraint firstItem="KJq-70-xoF" firstAttribute="trailing" secondItem="IcD-RF-JfU" secondAttribute="trailing" id="iS6-RP-wRv"/>
+                    <constraint firstItem="KJq-70-xoF" firstAttribute="leading" secondItem="IcD-RF-JfU" secondAttribute="leading" id="lwu-UE-Hn1"/>
+                    <constraint firstItem="LBz-gv-Qvb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tn8-fG-eVg"/>
+                    <constraint firstAttribute="trailing" secondItem="IcD-RF-JfU" secondAttribute="trailing" constant="15" id="ugS-ok-Sc4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatar" destination="LBz-gv-Qvb" id="hV7-No-ea8"/>
+                <outlet property="contentLabel" destination="KJq-70-xoF" id="lP7-ry-zAm"/>
+                <outlet property="nameLabel" destination="IcD-RF-JfU" id="rXb-L3-8Oo"/>
+                <outlet property="ratingView" destination="nxd-20-H8J" id="mmi-Hi-mx9"/>
+                <outlet property="timeLabel" destination="Waf-FG-Qky" id="47G-S5-TCK"/>
+            </connections>
+            <point key="canvasLocation" x="72" y="140.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_user" width="30" height="30"/>
+    </resources>
+</document>

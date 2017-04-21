@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="LeoiOSQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Restaurant Details View Controller-->
+        <scene sceneID="U3U-2r-Eka">
+            <objects>
+                <viewController storyboardIdentifier="RestaurantDetailsViewController" id="ihj-64-E6k" customClass="RestaurantDetailsViewController" customModule="LeoiOSQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0um-jD-LbM"/>
+                        <viewControllerLayoutGuide type="bottom" id="5pu-o9-P1e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lMK-6f-w5p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uDO-Yn-9VE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uDO-Yn-9VE" secondAttribute="trailing" id="CBa-MK-gj4"/>
+                            <constraint firstAttribute="bottom" secondItem="uDO-Yn-9VE" secondAttribute="bottom" id="LbI-sR-IIz"/>
+                            <constraint firstItem="uDO-Yn-9VE" firstAttribute="top" secondItem="lMK-6f-w5p" secondAttribute="top" id="NUO-r1-ttb"/>
+                            <constraint firstItem="uDO-Yn-9VE" firstAttribute="leading" secondItem="lMK-6f-w5p" secondAttribute="leading" id="frO-06-3yi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="reviewTableView" destination="uDO-Yn-9VE" id="Ik0-qU-wxO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLH-jC-wM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.60000000000002" y="122.78860569715144"/>
+        </scene>
+        <!--Authentication View Controller-->
+        <scene sceneID="Dfe-h2-Bqb">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationViewController" id="8iK-C1-5bX" customClass="AuthenticationViewController" customModule="LeoiOSQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DTh-Bb-oGt"/>
+                        <viewControllerLayoutGuide type="bottom" id="bol-TL-RJh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iRv-fk-7Wq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_launch" translatesAutoresizingMaskIntoConstraints="NO" id="diH-xx-wJt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authenticating..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Eb-8i-bgk">
+                                <rect key="frame" x="69" y="581" width="238.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.52772869639914655" green="1" blue="0.50037684336590305" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32411965843715262" green="1" blue="0.72300038684401668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="diH-xx-wJt" firstAttribute="top" secondItem="iRv-fk-7Wq" secondAttribute="top" id="8s5-f9-1lt"/>
+                            <constraint firstItem="7Eb-8i-bgk" firstAttribute="centerX" secondItem="iRv-fk-7Wq" secondAttribute="centerX" id="D3V-gr-zQH"/>
+                            <constraint firstItem="bol-TL-RJh" firstAttribute="top" secondItem="diH-xx-wJt" secondAttribute="bottom" id="L6C-QS-XO2"/>
+                            <constraint firstAttribute="trailing" secondItem="diH-xx-wJt" secondAttribute="trailing" id="ert-0h-suK"/>
+                            <constraint firstItem="bol-TL-RJh" firstAttribute="top" secondItem="7Eb-8i-bgk" secondAttribute="bottom" constant="50" id="fcW-JG-pzk"/>
+                            <constraint firstItem="diH-xx-wJt" firstAttribute="leading" secondItem="iRv-fk-7Wq" secondAttribute="leading" id="vVI-KL-hF8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hR0-1u-f6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530" y="123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image_launch" width="414" height="736"/>
+    </resources>
+</document>

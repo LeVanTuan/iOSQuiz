@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		510C8AE51EA5B54000E45398 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C8AE41EA5B54000E45398 /* UIViewControllerExtension.swift */; };
+		511DDCB71EA85A670054D5C6 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511DDCB61EA85A670054D5C6 /* Review.swift */; };
+		511DDCB91EA85A970054D5C6 /* ReviewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511DDCB81EA85A970054D5C6 /* ReviewUser.swift */; };
+		511DDCC01EA865910054D5C6 /* InforWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511DDCBE1EA865910054D5C6 /* InforWindowView.swift */; };
+		511DDCC11EA865910054D5C6 /* InforWindowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511DDCBF1EA865910054D5C6 /* InforWindowView.xib */; };
+		511DDCC41EA865B10054D5C6 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511DDCC21EA865B10054D5C6 /* ReviewCell.swift */; };
+		511DDCC51EA865B10054D5C6 /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511DDCC31EA865B10054D5C6 /* ReviewCell.xib */; };
+		5120F0C61EA5ED4A00E7201D /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5120F0C51EA5ED4A00E7201D /* Coordinate.swift */; };
+		5120F0C81EA5EDE500E7201D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5120F0C71EA5EDE500E7201D /* Category.swift */; };
+		5157DE1C1EA73E600057C085 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157DE1B1EA73E600057C085 /* Location.swift */; };
+		518C5F4B1EA471F70035F79B /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F4A1EA471F70035F79B /* NSObjectExtensions.swift */; };
+		518C5F4F1EA473970035F79B /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F4E1EA473970035F79B /* Restaurant.swift */; };
+		518C5F581EA4A9760035F79B /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F571EA4A9760035F79B /* FloatExtension.swift */; };
+		518C5F5A1EA4C4D50035F79B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518C5F591EA4C4D50035F79B /* UIImageExtension.swift */; };
+		518EC5331EA5C694000F60C0 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EC5311EA5C694000F60C0 /* AuthenticationViewController.swift */; };
+		51C287D81EA8AFC400863B26 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C287D71EA8AFC400863B26 /* RestaurantDetailHeaderView.swift */; };
+		51C287DA1EA8AFCE00863B26 /* RestaurantDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C287D91EA8AFCE00863B26 /* RestaurantDetailHeaderView.xib */; };
+		84A130741EA1A86C005F21BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A130721EA1A86C005F21BF /* Main.storyboard */; };
+		84A130761EA1A86C005F21BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A130751EA1A86C005F21BF /* Assets.xcassets */; };
+		84A130791EA1A86C005F21BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A130771EA1A86C005F21BF /* LaunchScreen.storyboard */; };
+		84A130891EA1DE17005F21BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130831EA1DE17005F21BF /* AppDelegate.swift */; };
+		84A1308B1EA1DE2D005F21BF /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1308A1EA1DE2D005F21BF /* AppDefines.swift */; };
+		84A1308D1EA1DE41005F21BF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1308C1EA1DE41005F21BF /* Strings.swift */; };
+		84A1308F1EA1DE4E005F21BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1308E1EA1DE4E005F21BF /* Constants.swift */; };
+		84A130931EA1DF68005F21BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130921EA1DF68005F21BF /* MainViewController.swift */; };
+		84A130951EA1DF85005F21BF /* RestaurantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130941EA1DF85005F21BF /* RestaurantDetailsViewController.swift */; };
+		84A130991EA20DA4005F21BF /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130981EA20DA4005F21BF /* APIServices.swift */; };
+		84A1309D1EA21091005F21BF /* APIBaseInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1309C1EA21091005F21BF /* APIBaseInput.swift */; };
+		84A1309F1EA2109E005F21BF /* APIBaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1309E1EA2109E005F21BF /* APIBaseOutput.swift */; };
+		84A130A11EA210A7005F21BF /* APIUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130A01EA210A7005F21BF /* APIUrl.swift */; };
+		84A130A31EA21169005F21BF /* RestaurantServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130A21EA21169005F21BF /* RestaurantServices.swift */; };
+		84A130A51EA2119C005F21BF /* GetRestaurantsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130A41EA2119C005F21BF /* GetRestaurantsInput.swift */; };
+		84A130A71EA211AE005F21BF /* GetRestaurantsOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130A61EA211AE005F21BF /* GetRestaurantsOutput.swift */; };
+		84A130A91EA216F8005F21BF /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130A81EA216F8005F21BF /* ResponseError.swift */; };
+		84A130AB1EA21821005F21BF /* RestaurantAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130AA1EA21821005F21BF /* RestaurantAPIProtocol.swift */; };
+		84A130AD1EA2199B005F21BF /* GetRestaurantReviewsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130AC1EA2199B005F21BF /* GetRestaurantReviewsInput.swift */; };
+		84A130AF1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A130AE1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift */; };
+		84EF397F1EA3AFC50075182F /* AuthenticationAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF397E1EA3AFC50075182F /* AuthenticationAPIProtocol.swift */; };
+		84EF39811EA3AFE60075182F /* AuthenticationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF39801EA3AFE60075182F /* AuthenticationServices.swift */; };
+		84EF39831EA3AFF70075182F /* AuthenticationInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF39821EA3AFF70075182F /* AuthenticationInput.swift */; };
+		84EF39851EA3B0100075182F /* AuthenticationOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF39841EA3B0100075182F /* AuthenticationOutput.swift */; };
+		84EF39871EA3C33B0075182F /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF39861EA3C33B0075182F /* Authentication.swift */; };
+		D17E176D7CAB3DB5162356F9 /* Pods_LeoiOSQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F05D38E7B2E661E781DB3EE /* Pods_LeoiOSQuiz.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1DB372B962502C1B22FCD973 /* Pods-LeoiOSQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeoiOSQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeoiOSQuiz/Pods-LeoiOSQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		510C8AE41EA5B54000E45398 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		511DDCB61EA85A670054D5C6 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		511DDCB81EA85A970054D5C6 /* ReviewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewUser.swift; sourceTree = "<group>"; };
+		511DDCBE1EA865910054D5C6 /* InforWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforWindowView.swift; sourceTree = "<group>"; };
+		511DDCBF1EA865910054D5C6 /* InforWindowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InforWindowView.xib; sourceTree = "<group>"; };
+		511DDCC21EA865B10054D5C6 /* ReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		511DDCC31EA865B10054D5C6 /* ReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
+		5120F0C51EA5ED4A00E7201D /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		5120F0C71EA5EDE500E7201D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		5157DE1B1EA73E600057C085 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		518C5F4A1EA471F70035F79B /* NSObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
+		518C5F4E1EA473970035F79B /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		518C5F571EA4A9760035F79B /* FloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
+		518C5F591EA4C4D50035F79B /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		518EC5311EA5C694000F60C0 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		51C287D71EA8AFC400863B26 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
+		51C287D91EA8AFCE00863B26 /* RestaurantDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantDetailHeaderView.xib; sourceTree = "<group>"; };
+		5F05D38E7B2E661E781DB3EE /* Pods_LeoiOSQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeoiOSQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A1306B1EA1A86C005F21BF /* LeoiOSQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeoiOSQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A130731EA1A86C005F21BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84A130751EA1A86C005F21BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84A130781EA1A86C005F21BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84A1307A1EA1A86C005F21BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A130831EA1DE17005F21BF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84A1308A1EA1DE2D005F21BF /* AppDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
+		84A1308C1EA1DE41005F21BF /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		84A1308E1EA1DE4E005F21BF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84A130921EA1DF68005F21BF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84A130941EA1DF85005F21BF /* RestaurantDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewController.swift; sourceTree = "<group>"; };
+		84A130981EA20DA4005F21BF /* APIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		84A1309C1EA21091005F21BF /* APIBaseInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIBaseInput.swift; sourceTree = "<group>"; };
+		84A1309E1EA2109E005F21BF /* APIBaseOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIBaseOutput.swift; sourceTree = "<group>"; };
+		84A130A01EA210A7005F21BF /* APIUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUrl.swift; sourceTree = "<group>"; };
+		84A130A21EA21169005F21BF /* RestaurantServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantServices.swift; sourceTree = "<group>"; };
+		84A130A41EA2119C005F21BF /* GetRestaurantsInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestaurantsInput.swift; sourceTree = "<group>"; };
+		84A130A61EA211AE005F21BF /* GetRestaurantsOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestaurantsOutput.swift; sourceTree = "<group>"; };
+		84A130A81EA216F8005F21BF /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		84A130AA1EA21821005F21BF /* RestaurantAPIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantAPIProtocol.swift; sourceTree = "<group>"; };
+		84A130AC1EA2199B005F21BF /* GetRestaurantReviewsInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestaurantReviewsInput.swift; sourceTree = "<group>"; };
+		84A130AE1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRestaurantReviewsOutput.swift; sourceTree = "<group>"; };
+		84EF397E1EA3AFC50075182F /* AuthenticationAPIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationAPIProtocol.swift; sourceTree = "<group>"; };
+		84EF39801EA3AFE60075182F /* AuthenticationServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationServices.swift; sourceTree = "<group>"; };
+		84EF39821EA3AFF70075182F /* AuthenticationInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationInput.swift; sourceTree = "<group>"; };
+		84EF39841EA3B0100075182F /* AuthenticationOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationOutput.swift; sourceTree = "<group>"; };
+		84EF39861EA3C33B0075182F /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		AB25868AD8F5D014F251E85F /* Pods-LeoiOSQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeoiOSQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeoiOSQuiz/Pods-LeoiOSQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84A130681EA1A86C005F21BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17E176D7CAB3DB5162356F9 /* Pods_LeoiOSQuiz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CD1B0D55CCA053D71E49132 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F05D38E7B2E661E781DB3EE /* Pods_LeoiOSQuiz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		511DDCBA1EA865910054D5C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				511DDCBB1EA865910054D5C6 /* Cells */,
+				511DDCBD1EA865910054D5C6 /* InforWindowView */,
+				51C287D61EA8AFAE00863B26 /* RestaurantDetailHeaderView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		511DDCBB1EA865910054D5C6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				511DDCBC1EA865910054D5C6 /* ReviewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		511DDCBC1EA865910054D5C6 /* ReviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				511DDCC21EA865B10054D5C6 /* ReviewCell.swift */,
+				511DDCC31EA865B10054D5C6 /* ReviewCell.xib */,
+			);
+			path = ReviewCell;
+			sourceTree = "<group>";
+		};
+		511DDCBD1EA865910054D5C6 /* InforWindowView */ = {
+			isa = PBXGroup;
+			children = (
+				511DDCBE1EA865910054D5C6 /* InforWindowView.swift */,
+				511DDCBF1EA865910054D5C6 /* InforWindowView.xib */,
+			);
+			path = InforWindowView;
+			sourceTree = "<group>";
+		};
+		518C5F471EA471880035F79B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				518C5F4A1EA471F70035F79B /* NSObjectExtensions.swift */,
+				518C5F571EA4A9760035F79B /* FloatExtension.swift */,
+				518C5F591EA4C4D50035F79B /* UIImageExtension.swift */,
+				510C8AE41EA5B54000E45398 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		518EC5301EA5C67A000F60C0 /* AuthenticationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				518EC5311EA5C694000F60C0 /* AuthenticationViewController.swift */,
+			);
+			path = AuthenticationViewController;
+			sourceTree = "<group>";
+		};
+		51C287D61EA8AFAE00863B26 /* RestaurantDetailHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				51C287D71EA8AFC400863B26 /* RestaurantDetailHeaderView.swift */,
+				51C287D91EA8AFCE00863B26 /* RestaurantDetailHeaderView.xib */,
+			);
+			path = RestaurantDetailHeaderView;
+			sourceTree = "<group>";
+		};
+		84A130621EA1A86C005F21BF = {
+			isa = PBXGroup;
+			children = (
+				84A1306D1EA1A86C005F21BF /* LeoiOSQuiz */,
+				84A1306C1EA1A86C005F21BF /* Products */,
+				FB734F5BA7DAD9F4687FDBA9 /* Pods */,
+				2CD1B0D55CCA053D71E49132 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84A1306C1EA1A86C005F21BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84A1306B1EA1A86C005F21BF /* LeoiOSQuiz.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84A1306D1EA1A86C005F21BF /* LeoiOSQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				84A130801EA1DE17005F21BF /* Classes */,
+				84A130881EA1DE17005F21BF /* Resources */,
+				84A130721EA1A86C005F21BF /* Main.storyboard */,
+				84A130751EA1A86C005F21BF /* Assets.xcassets */,
+				84A130771EA1A86C005F21BF /* LaunchScreen.storyboard */,
+				84A1307A1EA1A86C005F21BF /* Info.plist */,
+			);
+			path = LeoiOSQuiz;
+			sourceTree = "<group>";
+		};
+		84A130801EA1DE17005F21BF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				518C5F471EA471880035F79B /* Extensions */,
+				84A130811EA1DE17005F21BF /* AppDefines */,
+				84A130821EA1DE17005F21BF /* AppDelegate */,
+				84A130851EA1DE17005F21BF /* Services */,
+				84A130841EA1DE17005F21BF /* Models */,
+				511DDCBA1EA865910054D5C6 /* Views */,
+				84A130861EA1DE17005F21BF /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		84A130811EA1DE17005F21BF /* AppDefines */ = {
+			isa = PBXGroup;
+			children = (
+				84A1308A1EA1DE2D005F21BF /* AppDefines.swift */,
+				84A1308C1EA1DE41005F21BF /* Strings.swift */,
+				84A1308E1EA1DE4E005F21BF /* Constants.swift */,
+			);
+			path = AppDefines;
+			sourceTree = "<group>";
+		};
+		84A130821EA1DE17005F21BF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				84A130831EA1DE17005F21BF /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		84A130841EA1DE17005F21BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84EF39861EA3C33B0075182F /* Authentication.swift */,
+				518C5F4E1EA473970035F79B /* Restaurant.swift */,
+				5120F0C51EA5ED4A00E7201D /* Coordinate.swift */,
+				5120F0C71EA5EDE500E7201D /* Category.swift */,
+				5157DE1B1EA73E600057C085 /* Location.swift */,
+				511DDCB61EA85A670054D5C6 /* Review.swift */,
+				511DDCB81EA85A970054D5C6 /* ReviewUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84A130851EA1DE17005F21BF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84A130961EA20D8C005F21BF /* API */,
+				84EF397D1EA3AFAD0075182F /* Authentication */,
+				84A130971EA20D8C005F21BF /* Restaurant */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84A130861EA1DE17005F21BF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				518EC5301EA5C67A000F60C0 /* AuthenticationViewController */,
+				84A130901EA1DE9B005F21BF /* MainViewController */,
+				84A130911EA1DE9B005F21BF /* RestaurantDetailsViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		84A130881EA1DE17005F21BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84A130901EA1DE9B005F21BF /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84A130921EA1DF68005F21BF /* MainViewController.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		84A130911EA1DE9B005F21BF /* RestaurantDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84A130941EA1DF85005F21BF /* RestaurantDetailsViewController.swift */,
+			);
+			path = RestaurantDetailsViewController;
+			sourceTree = "<group>";
+		};
+		84A130961EA20D8C005F21BF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				84A130981EA20DA4005F21BF /* APIServices.swift */,
+				84A1309C1EA21091005F21BF /* APIBaseInput.swift */,
+				84A1309E1EA2109E005F21BF /* APIBaseOutput.swift */,
+				84A130A01EA210A7005F21BF /* APIUrl.swift */,
+				84A130A81EA216F8005F21BF /* ResponseError.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		84A130971EA20D8C005F21BF /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				84A130AA1EA21821005F21BF /* RestaurantAPIProtocol.swift */,
+				84A130A21EA21169005F21BF /* RestaurantServices.swift */,
+				84A130A41EA2119C005F21BF /* GetRestaurantsInput.swift */,
+				84A130A61EA211AE005F21BF /* GetRestaurantsOutput.swift */,
+				84A130AC1EA2199B005F21BF /* GetRestaurantReviewsInput.swift */,
+				84A130AE1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift */,
+			);
+			name = Restaurant;
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		84EF397D1EA3AFAD0075182F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				84EF397E1EA3AFC50075182F /* AuthenticationAPIProtocol.swift */,
+				84EF39801EA3AFE60075182F /* AuthenticationServices.swift */,
+				84EF39821EA3AFF70075182F /* AuthenticationInput.swift */,
+				84EF39841EA3B0100075182F /* AuthenticationOutput.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		FB734F5BA7DAD9F4687FDBA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB25868AD8F5D014F251E85F /* Pods-LeoiOSQuiz.debug.xcconfig */,
+				1DB372B962502C1B22FCD973 /* Pods-LeoiOSQuiz.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84A1306A1EA1A86C005F21BF /* LeoiOSQuiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84A1307D1EA1A86C005F21BF /* Build configuration list for PBXNativeTarget "LeoiOSQuiz" */;
+			buildPhases = (
+				A69F54E8C8635413CA7231BC /* [CP] Check Pods Manifest.lock */,
+				84A130671EA1A86C005F21BF /* Sources */,
+				84A130681EA1A86C005F21BF /* Frameworks */,
+				84A130691EA1A86C005F21BF /* Resources */,
+				364C814239EC22D621B191D2 /* [CP] Embed Pods Frameworks */,
+				0AA597C831A41766BA4E3C79 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeoiOSQuiz;
+			productName = LeoiOSQuiz;
+			productReference = 84A1306B1EA1A86C005F21BF /* LeoiOSQuiz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84A130631EA1A86C005F21BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Leo LE";
+				TargetAttributes = {
+					84A1306A1EA1A86C005F21BF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = WNM28K894G;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 84A130661EA1A86C005F21BF /* Build configuration list for PBXProject "LeoiOSQuiz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84A130621EA1A86C005F21BF;
+			productRefGroup = 84A1306C1EA1A86C005F21BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84A1306A1EA1A86C005F21BF /* LeoiOSQuiz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84A130691EA1A86C005F21BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A130791EA1A86C005F21BF /* LaunchScreen.storyboard in Resources */,
+				51C287DA1EA8AFCE00863B26 /* RestaurantDetailHeaderView.xib in Resources */,
+				511DDCC51EA865B10054D5C6 /* ReviewCell.xib in Resources */,
+				511DDCC11EA865910054D5C6 /* InforWindowView.xib in Resources */,
+				84A130761EA1A86C005F21BF /* Assets.xcassets in Resources */,
+				84A130741EA1A86C005F21BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AA597C831A41766BA4E3C79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeoiOSQuiz/Pods-LeoiOSQuiz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		364C814239EC22D621B191D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeoiOSQuiz/Pods-LeoiOSQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69F54E8C8635413CA7231BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84A130671EA1A86C005F21BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A130A51EA2119C005F21BF /* GetRestaurantsInput.swift in Sources */,
+				84A130951EA1DF85005F21BF /* RestaurantDetailsViewController.swift in Sources */,
+				5157DE1C1EA73E600057C085 /* Location.swift in Sources */,
+				84EF397F1EA3AFC50075182F /* AuthenticationAPIProtocol.swift in Sources */,
+				5120F0C81EA5EDE500E7201D /* Category.swift in Sources */,
+				84A130AF1EA219A6005F21BF /* GetRestaurantReviewsOutput.swift in Sources */,
+				511DDCC41EA865B10054D5C6 /* ReviewCell.swift in Sources */,
+				84A130A11EA210A7005F21BF /* APIUrl.swift in Sources */,
+				84A130A31EA21169005F21BF /* RestaurantServices.swift in Sources */,
+				84EF39811EA3AFE60075182F /* AuthenticationServices.swift in Sources */,
+				84A130991EA20DA4005F21BF /* APIServices.swift in Sources */,
+				84A1308B1EA1DE2D005F21BF /* AppDefines.swift in Sources */,
+				518EC5331EA5C694000F60C0 /* AuthenticationViewController.swift in Sources */,
+				518C5F581EA4A9760035F79B /* FloatExtension.swift in Sources */,
+				518C5F4F1EA473970035F79B /* Restaurant.swift in Sources */,
+				84A1308D1EA1DE41005F21BF /* Strings.swift in Sources */,
+				518C5F4B1EA471F70035F79B /* NSObjectExtensions.swift in Sources */,
+				511DDCB71EA85A670054D5C6 /* Review.swift in Sources */,
+				510C8AE51EA5B54000E45398 /* UIViewControllerExtension.swift in Sources */,
+				84A130A71EA211AE005F21BF /* GetRestaurantsOutput.swift in Sources */,
+				511DDCC01EA865910054D5C6 /* InforWindowView.swift in Sources */,
+				84A130AD1EA2199B005F21BF /* GetRestaurantReviewsInput.swift in Sources */,
+				84EF39831EA3AFF70075182F /* AuthenticationInput.swift in Sources */,
+				84EF39851EA3B0100075182F /* AuthenticationOutput.swift in Sources */,
+				84A130891EA1DE17005F21BF /* AppDelegate.swift in Sources */,
+				84A1308F1EA1DE4E005F21BF /* Constants.swift in Sources */,
+				84A1309F1EA2109E005F21BF /* APIBaseOutput.swift in Sources */,
+				511DDCB91EA85A970054D5C6 /* ReviewUser.swift in Sources */,
+				84A1309D1EA21091005F21BF /* APIBaseInput.swift in Sources */,
+				518C5F5A1EA4C4D50035F79B /* UIImageExtension.swift in Sources */,
+				51C287D81EA8AFC400863B26 /* RestaurantDetailHeaderView.swift in Sources */,
+				84A130AB1EA21821005F21BF /* RestaurantAPIProtocol.swift in Sources */,
+				84A130931EA1DF68005F21BF /* MainViewController.swift in Sources */,
+				84A130A91EA216F8005F21BF /* ResponseError.swift in Sources */,
+				84EF39871EA3C33B0075182F /* Authentication.swift in Sources */,
+				5120F0C61EA5ED4A00E7201D /* Coordinate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84A130721EA1A86C005F21BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A130731EA1A86C005F21BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84A130771EA1A86C005F21BF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A130781EA1A86C005F21BF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84A1307B1EA1A86C005F21BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84A1307C1EA1A86C005F21BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84A1307E1EA1A86C005F21BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB25868AD8F5D014F251E85F /* Pods-LeoiOSQuiz.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WNM28K894G;
+				INFOPLIST_FILE = LeoiOSQuiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leole.LeoiOSQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		84A1307F1EA1A86C005F21BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB372B962502C1B22FCD973 /* Pods-LeoiOSQuiz.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WNM28K894G;
+				INFOPLIST_FILE = LeoiOSQuiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leole.LeoiOSQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84A130661EA1A86C005F21BF /* Build configuration list for PBXProject "LeoiOSQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A1307B1EA1A86C005F21BF /* Debug */,
+				84A1307C1EA1A86C005F21BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84A1307D1EA1A86C005F21BF /* Build configuration list for PBXNativeTarget "LeoiOSQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A1307E1EA1A86C005F21BF /* Debug */,
+				84A1307F1EA1A86C005F21BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84A130631EA1A86C005F21BF /* Project object */;
+}
